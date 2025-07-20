@@ -8,6 +8,7 @@
   import reviews from '~/components/sections/reviews.vue';
   import faq from '~/components/sections/faq.vue';
   import forms from '~/components/sections/form.vue';
+  console.log('Hello World')
 </script>
 
 <template>
