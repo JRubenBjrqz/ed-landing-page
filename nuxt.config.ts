@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    'nuxt-lucide-icons'
+    'nuxt-lucide-icons',
+    'reka-ui/nuxt'
   ],
   tailwindcss: {
     exposeConfig: true,

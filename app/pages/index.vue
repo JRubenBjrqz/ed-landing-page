@@ -4,7 +4,7 @@
   import EdBenefits from '~/components/sections/EdBenefits.vue';
   import EdSteps from '~/components/sections/EdSteps.vue';
   import EdCounters from '~/components/sections/EdCounters.vue';
-  import services from '~/components/sections/services.vue';
+  import EdServices from '~/components/sections/EdServices.vue';
   import reviews from '~/components/sections/reviews.vue';
   import faq from '~/components/sections/faq.vue';
   import forms from '~/components/sections/form.vue';
@@ -16,7 +16,7 @@
   <EdBenefits />
   <EdSteps />
   <EdCounters />
-  <services />
+  <EdServices />
   <reviews />
   <faq />
   <forms />
