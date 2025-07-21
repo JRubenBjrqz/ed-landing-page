@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import hero from '~/components/sections/hero.vue';
+  import EdHero from '~/components/sections/EdHero.vue';
   import about from '~/components/sections/about.vue';
   import benefits from '~/components/sections/benefits.vue';
   import steps from '~/components/sections/steps.vue';
@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <hero />
+  <EdHero />
   <about />
   <benefits />
   <steps />
