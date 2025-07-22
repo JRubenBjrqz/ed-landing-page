@@ -6,8 +6,8 @@
   import EdCounters from '~/components/sections/EdCounters.vue';
   import EdServices from '~/components/sections/EdServices.vue';
   import EdTestimonials from '~/components/sections/EdTestimonials.vue';
-  import faq from '~/components/sections/faq.vue';
-  import forms from '~/components/sections/form.vue';
+  import EdFaq from '~/components/sections/EdFaq.vue';
+  import EdForm from '~/components/sections/EdForm.vue';
 </script>
 
 <template>
@@ -18,6 +18,7 @@
   <EdCounters />
   <EdServices />
   <EdTestimonials />
-  <faq />
-  <forms />
+  <EdFaq />
+  <EdForm />
+  <EdFooter />
 </template>
