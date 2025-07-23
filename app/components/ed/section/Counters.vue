@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { Rocket, Smile, Box, Grid3X3 } from 'lucide-vue-next';
 
-  import EdCounterStat from '../EdCounterStat.vue';
+  // import EdCounterStat from '../ed/EdCounterStat.vue';
 
   const counterStats = [
     {

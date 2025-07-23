@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import FaqItem from '@/components/EdFaqItem.vue'
-
   const faqs = [
     {
       question: "What Services Do You Offer?",
@@ -51,7 +49,7 @@
           <h2 class="text-4xl font-extrabold md:text-5xl">You Ask We Answer</h2>
         </div>
         <div class="mt-12 grid gap-8">
-          <FaqItem
+          <EdFaqItem
             v-for="(faq, idx) in faqs"
             :key="idx"
             :question="faq.question"

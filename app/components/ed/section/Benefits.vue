@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import { Lightbulb, ChartNoAxesColumn, Shapes, User, Globe, Search } from 'lucide-vue-next';
-  import EdBenefitCard from '../EdBenefitCard.vue';
 
   const benefitCards = [
     {
@@ -56,7 +55,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-            <EdBenefitCard
+            <EdBenefitsCard
               v-for="(card, index) in benefitCards"
               :key="index"
               :icon="card.icon"

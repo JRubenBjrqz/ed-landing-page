@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { MessageCircle } from 'lucide-vue-next';
 
-  import EdHeader from '../EdHeader.vue';
+  // import EdHeader from '../ed/EdHeader.vue';
 </script>
 
 <template>

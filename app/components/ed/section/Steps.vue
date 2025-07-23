@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { MessageCircle, Monitor, Search, Star } from 'lucide-vue-next';
 
-  import EdStepRow from '../EdStepRow.vue';
+  // import EdStepRow from '../ed/EdStepRow.vue';
 
   const stepRows = [
     {
