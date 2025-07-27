@@ -1,13 +1,13 @@
 <template>
   <NuxtLayout name="ed-default">
     <EdSectionHero />
-    <EdSectionAbout />
+    <!-- <EdSectionAbout />
     <EdSectionBenefits />
     <EdSectionSteps />
     <EdSectionCounters />
     <EdSectionServices />
     <EdSectionTestimonials />
     <EdSectionFaq />
-    <EdSectionForm />
+    <EdSectionForm /> -->
   </NuxtLayout>
 </template>
