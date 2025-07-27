@@ -6,7 +6,7 @@
 <template>
     <section
       ref="EdHero"
-      class="relative flex min-h-screen items-center justify-start overflow-hidden py-20 text-left w-full"
+      class="relative flex min-h-screen items-center justify-start overflow-hidden py-20 text-left w-full bg-[#F8F2EF]"
     >
       <div
         class="relative z-10 flex flex-col items-start gap-6 px-4 md:px-8 lg:px-16 w-full max-w-full md:absolute md:w-[420px] md:h-[311px] md:left-[300px] md:top-[253px]"
