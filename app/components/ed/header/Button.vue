@@ -36,6 +36,7 @@
 
 <style scoped>
     .ed-header-button {
-        @apply p-2 cursor-pointer rounded-md text-[var(--ed-black)] hover:text-[var(--ed-primary)] transition-colors duration-300;
+        @apply p-2 cursor-pointer rounded-md text-[var(--ed-black)] 
+			hover:text-[var(--ed-primary)] transition-colors duration-300;
     }
 </style>

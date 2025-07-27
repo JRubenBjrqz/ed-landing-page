@@ -16,6 +16,6 @@
   }
 
   .ed-footer__container {
-    @apply container mx-auto;
+    @apply container mx-auto flex flex-col gap-y-4;
   }
 </style>?

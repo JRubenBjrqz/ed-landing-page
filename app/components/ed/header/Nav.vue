@@ -27,7 +27,8 @@
 
 <style scoped>
 	.ed-header-nav {
-		@apply fixed top-[80px] right-4 md:right-8 lg:right-16 z-40 bg-[var(--ed-white)] py-6 px-8 shadow-sm rounded-[32px] flex flex-col border
+		@apply fixed top-[80px] right-4 md:right-8 lg:right-16
+			z-40 bg-[var(--ed-white)] py-6 px-8 shadow-sm rounded-[32px] flex flex-col border
 	}
 
 	.ed-header-nav__nav {
@@ -35,7 +36,8 @@
 	}
 
 	.ed-header-nav__link {
-		@apply text-[var(--ed-black)] text-2xl cursor-pointer hover:italic hover:text-[var(--ed-primary)] transition-colors duration-300;
+		@apply text-[var(--ed-black)] text-2xl cursor-pointer
+			hover:italic hover:text-[var(--ed-primary)] transition-colors duration-300;
 		font-family: var(--ed-work-sans);
 	}
 </style>
