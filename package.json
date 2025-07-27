@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.6",
     "@fontsource-variable/work-sans": "^5.2.6",
     "@fontsource/fira-sans": "^5.2.6",
     "@nuxt/image": "^1.10.0",

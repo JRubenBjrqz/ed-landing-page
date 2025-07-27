@@ -1,5 +1,6 @@
 @import "@fontsource/fira-sans";
 @import "@fontsource-variable/work-sans";
+@import "@fontsource-variable/dm-sans";
 
 :root {
   /* Colors */
@@ -19,5 +20,6 @@
 
   /* Fonts */
   --ed-fira-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
-  --ed-work-sans: 'Work Sans Variable', Comic, Georgia, serif;
+  --ed-work-sans: 'Work Sans Variable', Georgia, serif;
+  --ed-dm-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
 }
