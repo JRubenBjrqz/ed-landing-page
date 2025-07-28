@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-	import { MessageCircle } from 'lucide-vue-next';
+	const EdHero = ref<HTMLElement>();
 </script>
 
 <template>

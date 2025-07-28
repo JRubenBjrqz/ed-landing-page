@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout name="ed-default">
     <EdSectionHero />
-    <!-- <EdSectionAbout />
-    <EdSectionBenefits />
+    <EdSectionAbout />
+    <!-- <EdSectionBenefits />
     <EdSectionSteps />
     <EdSectionCounters />
     <EdSectionServices />
