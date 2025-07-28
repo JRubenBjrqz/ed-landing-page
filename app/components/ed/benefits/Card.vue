@@ -1,20 +1,44 @@
 <script lang="ts" setup>
     const props = defineProps<{
-        icon: string
+        img: string
         title: string
         description: string
     }>()
 </script>
 
 <template>
-    <div
-        class="flex flex-col items-center text-center p-8 bg-white rounded-[20px] border border-gray-100 shadow-sm"
-    >
-        <div class="relative flex items-center justify-center mb-4 h-16 w-16">
-        <div class="absolute inset-0 rounded-full bg-easydevs-orange opacity-40 blur-xl"></div>
-        <component :is="props.icon" class="relative z-10 h-10 w-10 text-easydevs-dark-text" />
+    <div class="ed-benefits-card">
+        <NuxtImg
+            :src="`/img/${props.img}.png`"
+            height="72"
+        />
+        <div class="ed-benefits-card__content">    
+            <h3 class="ed-benefits-card__content-title">
+                {{props.title}}
+            </h3>
+            <p class="ed-benefits-card__content-description">
+                {{props.description}}
+            </p>
         </div>
-        <h3 class="text-xl font-bold text-easydevs-dark-text">{{props.title}}</h3>
-        <p class="mt-2 text-easydevs-light-text">{{props.description}}</p>
     </div>
 </template>
+
+<style scoped>
+    .ed-benefits-card {
+        @apply flex flex-col items-center text-center p-8 text-[var(--ed-black)];
+    }
+
+    .ed-benefits-card__content {
+        @apply flex flex-col gap-1 mt-6;
+    }
+
+    .ed-benefits-card__content-title {
+        @apply text-[32px] font-bold;
+        font-family: var(--ed-fira-sans);
+    }
+
+    .ed-benefits-card__content-description {
+        @apply text-base max-w-52 mx-auto;
+        font-family: var(--ed-work-sans);
+    }
+</style>

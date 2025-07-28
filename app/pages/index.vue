@@ -2,9 +2,9 @@
   <NuxtLayout name="ed-default">
     <EdSectionHero />
     <EdSectionAbout />
-    <!-- <EdSectionBenefits />
+    <EdSectionBenefits />
     <EdSectionSteps />
-    <EdSectionCounters />
+    <!-- <EdSectionCounters />
     <EdSectionServices />
     <EdSectionTestimonials />
     <EdSectionFaq />
