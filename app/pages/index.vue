@@ -5,9 +5,9 @@
     <EdSectionBenefits />
     <EdSectionSteps />
     <EdSectionCounters />
-    <!-- <EdSectionServices />
+    <!-- <EdSectionServices /> -->
     <EdSectionTestimonials />
     <EdSectionFaq />
-    <EdSectionForm /> -->
+    <!-- <EdSectionForm /> -->
   </NuxtLayout>
 </template>
