@@ -29,6 +29,7 @@
             <component
                 :is="props.icon"
                 size="32"
+                stroke-width="1"
             />
         </div>
     </div>
@@ -36,7 +37,7 @@
 
 <style scoped>
     .ed-steps-row {
-        @apply flex flex-col justify-between md:flex-row items-start md:items-center py-8 border-t border-[var(--ed-border)];
+        @apply flex flex-col justify-between md:flex-row items-start md:items-center py-8 border-t border-[var(--ed-border-light)];
     }
 
     .ed-steps-row__header {

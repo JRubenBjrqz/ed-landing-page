@@ -8,12 +8,25 @@
 </script>
 
 <template>
-  	<div className="flex flex-col items-center text-center px-4">
-    	<component :is="props.icon" className="mb-4 h-12 w-12 text-gray-400" />
-    	<div className="text-lg font-medium text-easydevs-light-text">{{props.label}}</div>
-		<div className="mt-2 text-6xl font-extrabold">
-			{{ props.count }}
-			<span className="text-easydevs-orange">{{props.suffix}}</span>
+  	<div class="flex flex-col px-4 h-[298px] justify-between">
+    	<div class="flex flex-col gap-3 font-normal" style="font-family: var(--ed-work-sans);">
+            <component 
+                :is="props.icon" 
+                size="30"
+                stroke-width="1"
+            />
+            <div class="text-lg max-w-4">{{props.label}}</div>
+        </div>
+		<div class="flex justify-between items-end" style="font-family: var(--ed-work-sans);">
+			<span class="text-8xl font-light">{{props.count}}</span>
+            <component
+                :is="props.suffix"
+                size="56"
+                stroke-width="1"
+                class="text-[var(--ed-primary)]"
+            >
+                {{props.suffix}}
+            </component>
 		</div>
   	</div>
 </template>
