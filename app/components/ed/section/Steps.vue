@@ -9,7 +9,8 @@
     },
     {
 		icon: Monitor,
-		title: 'Work Starts (Magic inprogress).',
+		title: 'Work Starts',
+		subtitle: '(Magic Inprogress).',
 		description: 'We begin designing, writing, and building your project. We will give you regular updates and show you our progress.',
     },
     {
@@ -37,6 +38,7 @@
 				:number="index + 1"
 				:title="row.title"
 				:description="row.description"
+				:subtitle="row.subtitle"
 				:icon="row.icon"
 			/>
 		</div>

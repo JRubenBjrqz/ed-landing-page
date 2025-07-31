@@ -15,7 +15,7 @@
   --ed-primary-gradient: linear-gradient(90deg, #FF742A 0%, #FFB1B2 100%);
 
   /* Borders */
-  --ed-border: rgba(0, 0, 0, 0.17);
+  --ed-border: rgba(35, 38, 49, 0.2);
 
   /* Shadows */
   --ed-shadow: 6px -8px 20.1px 0px rgba(35, 38, 49, 0.11);

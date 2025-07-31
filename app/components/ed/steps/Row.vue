@@ -3,40 +3,56 @@
         number: number
         icon: string
         title: string
+        subtitle?: string
         description: string
     }>()
 </script>
 
 <template>
-    <div className="ed-steps-row">
-        <div className="flex items-center gap-x-3 flex-shrink-0 text-left md:w-1/4">
-            <div className="text-8xl font-extrabold py-2">{{props.number}}</div>
-            <h3 className="text-[32px] font-bold">{{props.title}}</h3>
-        <!-- {subtitle && <p className="text-lg text-easydevs-light-text mt-1">{subtitle}</p>} -->
+    <div :class="['ed-steps-row', props.number === 4 ? 'border-b' : '']">
+        <div class="ed-steps-row__header">
+            <div class="ed-steps-row__header-number">{{props.number}}</div>
+            <div :class="props.number === 2 ? '' : 'w-[278px]'">
+                <h3 class="ed-steps-row__header-title">{{props.title}}</h3>
+                <h3 
+                    v-if="props.subtitle"
+                    class="ed-steps-row__header-title"
+                >
+                    {{props.subtitle}}
+                </h3>
+            </div>
         </div>
-        <div className="flex-grow text-left md:w-1/2">
-            <p className="mt-2 text-lg">{{props.description}}</p>
+        <div class="ed-steps-row__description">
+            <p>{{props.description}}</p>
         </div>
-        <div className="flex-shrink-0 md:w-1/4 flex justify-end">
-            <component :is="props.icon" className="h-8 w-8" />
+        <div class="flex-shrink-0 flex justify-end items-start mb-auto">
+            <component
+                :is="props.icon"
+                size="32"
+            />
         </div>
     </div>
 </template>
 
 <style scoped>
     .ed-steps-row {
-        @apply flex flex-col md:flex-row items-start md:items-center gap-8 py-8;
+        @apply flex flex-col justify-between md:flex-row items-start md:items-center py-8 border-t border-[var(--ed-border)];
     }
 
-    .ed-steps-row__number {
-        @apply text-6xl font-extrabold;
+    .ed-steps-row__header {
+        @apply flex items-center gap-x-4 flex-shrink-0 text-left;
     }
 
-    .ed-steps-row__title {
-        @apply text-3xl font-bold mt-2;
+    .ed-steps-row__header-number {
+        @apply text-8xl font-extrabold py-2 ;
+    }
+
+    .ed-steps-row__header-title {
+        @apply text-[32px] font-bold leading-none;
     }
 
     .ed-steps-row__description {
-        @apply mt-2 text-lg;
+        @apply flex-grow text-left md:w-1/2 max-w-[353px] text-base;
+        font-family: var(--ed-work-sans);
     }
 </style>
