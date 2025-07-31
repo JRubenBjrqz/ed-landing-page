@@ -8,6 +8,6 @@
     <!-- <EdSectionServices /> -->
     <EdSectionTestimonials />
     <EdSectionFaq />
-    <!-- <EdSectionForm /> -->
+    <EdSectionForm />
   </NuxtLayout>
 </template>
