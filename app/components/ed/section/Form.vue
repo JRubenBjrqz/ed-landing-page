@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-// import { Input } from '@/components/ui/input.vue'
-// import { Textarea } from '@/components/ui/textarea.vue'
-// import { Button } from '@/components/ui/button.vue'
 import { ArrowRight } from 'lucide-vue-next'
 
 const name = ref('')
@@ -35,27 +32,42 @@ function submitForm() {
         <p class="text-lg text-easydevs-light-text">
           Book a free call and get a tailored proposal for your business.
         </p>
-        <form class="mt-8 w-full space-y-6" @submit.prevent="submitForm">
-          <Input
+        <form
+          class="mt-8 w-full space-y-6"
+          action="mailto:contact@easydevs.us"
+          method="POST"
+          enctype="text/plain"
+        >
+          <input
+            name="Name"
             v-model="name"
             type="text"
             placeholder="Name"
             class="w-full border-b border-gray-400 bg-transparent py-3 focus:border-easydevs-orange focus:ring-0"
+            required
           />
-          <Input
+          <input
+            name="Email"
             v-model="email"
             type="email"
             placeholder="Email"
             class="w-full border-b border-gray-400 bg-transparent py-3 focus:border-easydevs-orange focus:ring-0"
+            required
           />
-          <Textarea
+          <textarea
+            name="Message"
             v-model="message"
             placeholder="Message"
             class="min-h-[120px] w-full border-b border-gray-400 bg-transparent py-3 focus:border-easydevs-orange focus:ring-0"
-          />
-          <Button variant="outline" class="mt-8 rounded-full px-8 py-6 text-lg font-semibold bg-transparent" type="submit">
-            Send Message <ArrowRight class="ml-2 h-5 w-5" />
-          </Button>
+            required
+          ></textarea>
+          <button
+            class="mt-8 rounded-full px-8 py-6 text-lg font-semibold bg-transparent border border-easydevs-orange"
+            type="submit"
+          >
+            Send Message
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </button>
         </form>
       </div>
     </div>

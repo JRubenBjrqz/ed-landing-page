@@ -25,4 +25,7 @@
   --ed-fira-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
   --ed-work-sans: 'Work Sans Variable', Georgia, serif;
   --ed-dm-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  
+  /* Sizes */
+  --ed-xl: 1360px;
 }

@@ -18,10 +18,12 @@
 	</button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 	.ed-hero-button {
-		@apply box-border text-base flex flex-row items-center p-2 border border-[var(--ed-black)] rounded-full
-			bg-transparent hover:bg-[var(--ed-black)] hover:text-white transition-colors;
+		@apply box-border text-base flex flex-row
+		    items-center p-2 border border-[var(--ed-black)]
+			rounded-full bg-transparent hover:bg-[var(--ed-black)]
+		    hover:text-white transition-colors max-w-[170px];
 		font-family: var(--ed-work-sans);
 	}
 
@@ -38,6 +40,7 @@
 	}
 
 	.ed-hero__text {
-		@apply font-normal text-base text-[var(--ed-black)] group-hover:text-white transition-colors;
+		@apply font-normal text-base text-[var(--ed-black)]
+	        group-hover:text-white transition-colors;
 	}
 </style>

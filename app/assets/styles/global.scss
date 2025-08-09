@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@mixin basic-display($display: flex, $direction: column, $gap: unset, $padding: unset, $max: unset) {
+    max-width: $max;
+    display: $display;
+    flex-direction: $direction;
+    gap: $gap;
+    padding: $padding;
+}
