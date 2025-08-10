@@ -35,25 +35,29 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .ed-steps-row {
-        @apply flex flex-col justify-between md:flex-row items-start md:items-center py-8 border-t border-[var(--ed-border-light)];
-    }
-
-    .ed-steps-row__header {
-        @apply flex items-center gap-x-4 flex-shrink-0 text-left;
-    }
-
-    .ed-steps-row__header-number {
-        @apply text-8xl font-extrabold py-2 ;
-    }
-
-    .ed-steps-row__header-title {
-        @apply text-[32px] font-bold leading-none;
-    }
-
-    .ed-steps-row__description {
-        @apply flex-grow text-left md:w-1/2 max-w-[353px] text-base;
-        font-family: var(--ed-work-sans);
+        @apply flex flex-col justify-between md:flex-row 
+            items-start md:items-center py-8 border-t
+            border-[var(--ed-border-light)];
+    
+        &__header {
+            @apply flex items-center gap-x-4 flex-shrink-0
+                text-left;
+        }
+    
+        &__header-number {
+            @apply text-8xl font-extrabold py-2 ;
+        }
+    
+        &__header-title {
+            @apply text-[32px] font-bold leading-none;
+        }
+    
+        &__description {
+            @apply flex-grow text-left md:w-1/2 max-w-[353px]
+                text-base;
+            font-family: var(--ed-work-sans);
+        }
     }
 </style>
