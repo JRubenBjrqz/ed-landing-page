@@ -1,6 +1,8 @@
 <script lang="ts" setup>
     const props = defineProps<{
         img: string
+        width: number
+        height: number
         title: string
         description: string
     }>()
@@ -8,37 +10,41 @@
 
 <template>
     <div class="ed-benefits-card">
-        <NuxtImg
-            :src="`/img/${props.img}.png`"
-            height="72"
-        />
-        <div class="ed-benefits-card__content">    
-            <h3 class="ed-benefits-card__content-title">
+        <div class="ed-benefits-card__header">
+            <NuxtImg
+                :src="`/img/${props.img}.png`"
+                :alt="props.title"
+                :width="props.width"
+                :height="props.height"
+            />
+            <h3 class="ed-benefits-card__title">
                 {{props.title}}
             </h3>
-            <p class="ed-benefits-card__content-description">
-                {{props.description}}
-            </p>
         </div>
+        <p class="ed-benefits-card__description">
+            {{props.description}}
+        </p>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .ed-benefits-card {
-        @apply flex flex-col items-center text-center p-8 text-[var(--ed-black)];
-    }
-
-    .ed-benefits-card__content {
-        @apply flex flex-col gap-1 mt-6;
-    }
-
-    .ed-benefits-card__content-title {
-        @apply text-[32px] font-bold;
-        font-family: var(--ed-fira-sans);
-    }
-
-    .ed-benefits-card__content-description {
-        @apply text-base max-w-52 mx-auto;
-        font-family: var(--ed-work-sans);
+        @apply flex flex-col items-center text-center
+             gap-1 text-[var(--ed-black)] w-full
+             max-w-[265px] max-h-[260px] h-full;
+        
+        &__header {
+            @apply flex flex-col gap-4 w-full;
+        }
+        
+        &__title {
+            @apply text-[32px] font-bold ml-3 text-left;
+            font-family: var(--ed-fira-sans);
+        }
+        
+        &__description {
+            @apply text-base w-[200px] text-left ml-6;
+            font-family: var(--ed-work-sans);
+        }
     }
 </style>
