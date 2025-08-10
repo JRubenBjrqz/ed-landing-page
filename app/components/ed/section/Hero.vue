@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const EdHero = ref<HTMLElement>();
+    const EdHero = ref<HTMLElement | null>(null);
 </script>
 
 <template>

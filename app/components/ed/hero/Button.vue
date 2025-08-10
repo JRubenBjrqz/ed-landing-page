@@ -4,14 +4,14 @@
 
 <template>
 	<button class="ed-hero-button group">
-		<div class="ed-hero__container-icon">
+		<div class="ed-hero-button__icon-container">
 			<MessageCircle
-				class="ed-hero__icon"
+				class="ed-hero-button__icon"
 				:size="20"
 			/>
 		</div>
-		<div class="ed-hero__container-text">
-			<span class="ed-hero__text">
+		<div class="ed-hero-button__container-text">
+			<span class="ed-hero-button__text">
 				Get in touch
 			</span>
 		</div>
@@ -25,22 +25,22 @@
 			rounded-full bg-transparent hover:bg-[var(--ed-black)]
 		    hover:text-white transition-colors max-w-[170px];
 		font-family: var(--ed-work-sans);
-	}
+		
+		&__icon-container {
+		    @apply p-2 bg-[#232631] rounded-full;
+		}
+		
+		&__icon {
+			@apply text-white transition-colors;
+		}
+		
+		&__container-text {
+			@apply flex flex-row justify-center items-center px-2 gap-2;
+		}
 
-	.ed-hero__container-icon {
-		@apply p-2 bg-[#232631] rounded-full;
-	}
-
-	.ed-hero__icon {
-		@apply text-white transition-colors;
-	}
-
-	.ed-hero__container-text {
-		@apply flex flex-row justify-center items-center px-2 gap-2;
-	}
-
-	.ed-hero__text {
-		@apply font-normal text-base text-[var(--ed-black)]
-	        group-hover:text-white transition-colors;
+		&__text {
+			@apply font-normal text-base text-[var(--ed-black)]
+		        group-hover:text-white transition-colors;
+		}
 	}
 </style>
