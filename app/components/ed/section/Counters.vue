@@ -1,6 +1,7 @@
 <script lang="ts" setup>
     import { Rocket, Smile, Package, Shapes, Plus, Percent } from 'lucide-vue-next';
 
+    const EdCounters = ref<HTMLElement | null>(null);
     const counterStats = [
         {
             icon: Rocket,
@@ -30,7 +31,10 @@
 </script>
 
 <template>
-    <section class="ed-counters">
+    <section
+        ref="EdCounters"
+        class="ed-counters"
+    >
         <div class="ed-counters__container">
             <h2 class="ed-counters__title">
                 We Build Great Things. They Grew.
@@ -51,21 +55,21 @@
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .ed-counters {
-        @apply py-20 md:py-32;
-    }
-
-    .ed-counters__container {
-        @apply container mx-auto px-4 lg:px-16;
-    }
-
-    .ed-counters__title {
-        @apply text-left text-5xl font-extrabold mb-16;
-        font-family: var(--ed-fira-sans);
-    }
-
-    .ed-counters__container-stats {
-        @apply mt-16 grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-x divide-[var(--ed-border)];
+        @apply py-20 md:py-32 min-h-screen w-full max-w-[var(--ed-xl)];
+        
+        &__container {
+            @apply container mx-auto px-4 lg:px-16;
+        }
+    
+        &__title {
+            @apply text-left text-5xl font-extrabold mb-16;
+            font-family: var(--ed-fira-sans);
+        }
+    
+        &__container-stats {
+            @apply mt-16 grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-x divide-[var(--ed-border)];
+        }
     }
 </style>
