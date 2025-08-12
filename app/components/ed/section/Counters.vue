@@ -57,7 +57,7 @@
 
 <style lang="scss" scoped>
     .ed-counters {
-        @apply py-20 md:py-32 min-h-screen w-full max-w-[var(--ed-xl)];
+        @apply py-20 md:py-24 min-h-screen w-full max-w-[var(--ed-xl)];
         
         &__container {
             @apply container mx-auto px-4 lg:px-16;
