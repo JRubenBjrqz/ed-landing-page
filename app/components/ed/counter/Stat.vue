@@ -5,8 +5,6 @@
 		count: number
 		suffix: string
 	}>()
-	
-	
 </script>
 
 <template>

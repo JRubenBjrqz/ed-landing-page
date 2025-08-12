@@ -7,7 +7,7 @@
 
 <template>
 	<div>
-		<h3 class="text-xl font-bold text-easydevs-dark-text">{{ question }}</h3>
-		<p class="mt-2 text-easydevs-light-text">{{ answer }}</p>
+		<h3 class="text-2xl font-bold" style="font-family: var(--ed-fira-sans);">{{ question }}</h3>
+		<p class="text-base mt-2" style="font-family: var(--ed-dm-sans)">{{ answer }}</p>
 	</div>
 </template>
