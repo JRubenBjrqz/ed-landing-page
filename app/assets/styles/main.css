@@ -10,6 +10,8 @@
   --ed-primary: #FF742A;
   --ed-white: #FDFDFD;
   --ed-gray: #FBFBFB;
+  --ed-light-background: #F8F2EF;
+  --ed-white-background: #FBFBFB;
 
   /* Gradients */
   --ed-primary-gradient: linear-gradient(90deg, #FF742A 0%, #FFB1B2 100%);
@@ -28,4 +30,20 @@
   
   /* Sizes */
   --ed-xl: 1360px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ed-fira-sans);
+  color: var(--ed-black);
+  margin: 0;
+}
+
+p, a, li, button, NuxtLink {
+  font-family: var(--ed-work-sans);
+  color: var(--ed-black);
+  margin: 0;
+}
+
+section {
+    @apply min-h-screen w-full max-w-[var(--ed-xl)] p-4 mx-auto;
 }

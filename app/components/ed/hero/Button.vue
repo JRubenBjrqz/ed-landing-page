@@ -35,7 +35,6 @@
 		    items-center p-2 border border-[var(--ed-black)]
 			rounded-full bg-transparent hover:bg-[var(--ed-black)]
 		    hover:text-white transition-colors max-w-[170px];
-		font-family: var(--ed-work-sans);
 		
 		&__icon-container {
 		    @apply p-2 bg-[#232631] rounded-full;
@@ -50,8 +49,8 @@
 		}
 
 		&__text {
-			@apply font-normal text-base text-[var(--ed-black)]
-		        group-hover:text-white transition-colors;
+			@apply font-normal text-base  group-hover:text-white
+			    transition-colors;
 		}
 	}
 </style>
