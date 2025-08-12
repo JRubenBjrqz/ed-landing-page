@@ -1,10 +1,6 @@
-<script lang="ts" setup>
-    const EdHero = ref<HTMLElement | null>(null);
-</script>
-
 <template>
     <section
-        ref="EdHero"
+        id="edHero"
         class="ed-hero"
     >
         <div

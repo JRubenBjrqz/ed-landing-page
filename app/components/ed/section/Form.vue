@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { ArrowRight } from 'lucide-vue-next'
-
-const name = ref('')
-const email = ref('')
-const message = ref('')
-
-function submitForm() {
-  // Aquí puedes manejar el envío del formulario
-  // Por ejemplo, enviar los datos a una API o mostrar un mensaje de éxito
-}
+    import { ArrowRight } from 'lucide-vue-next'
+    
+    const edForm = ref<HTMLElement | null>(null);
+    const name = ref('')
+    const email = ref('')
+    const message = ref('')
+    
+    function submitForm() {
+      // Aquí puedes manejar el envío del formulario
+      // Por ejemplo, enviar los datos a una API o mostrar un mensaje de éxito
+    }
 </script>
 
 <template>
-  <section class="relative flex flex-col items-center justify-center overflow-hidden bg-easydevs-bg py-20 md:py-32">
+  <section ref="edForm" class="relative flex flex-col items-center justify-center overflow-hidden bg-easydevs-bg py-20 md:py-32">
     <div class="absolute inset-0">
       <!-- Placeholder for the abstract background shapes -->
       <!-- <img

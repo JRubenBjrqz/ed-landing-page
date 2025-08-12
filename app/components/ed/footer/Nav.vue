@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 	const sectionLinks = [
-        { label: 'Home', id: 'home' },
+        { label: 'Home', id: 'EdHero' },
         { label: 'About', id: 'about' },
         { label: 'Benefits', id: 'benefits' },
         { label: 'Portfolio', id: 'portfolio' },
