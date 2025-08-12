@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <section ref="edForm" class="relative flex flex-col items-center justify-center overflow-hidden bg-easydevs-bg py-20 md:py-32">
+  <section id="edForm" class="relative flex flex-col items-center justify-center overflow-hidden bg-easydevs-bg py-20 md:py-32">
     <div class="absolute inset-0">
       <!-- Placeholder for the abstract background shapes -->
       <!-- <img

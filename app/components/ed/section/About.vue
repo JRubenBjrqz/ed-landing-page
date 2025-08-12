@@ -1,11 +1,10 @@
 <script lang="ts" setup>
     import { Handshake } from "lucide-vue-next";
-    const edAbout = ref<HTMLElement | null>(null);
 </script>
 
 <template>
     <section
-        ref="edAbout"
+        id="edAbout"
         class="ed-about"
     >
         <div class="ed-about__container">

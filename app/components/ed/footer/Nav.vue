@@ -4,7 +4,7 @@
         { label: 'About', id: 'about' },
         { label: 'Benefits', id: 'benefits' },
         { label: 'Portfolio', id: 'portfolio' },
-        { label: 'Services', id: 'services' },
+        // { label: 'Services', id: 'services' },
         { label: 'Reviews', id: 'reviews' },
     ]
 </script>

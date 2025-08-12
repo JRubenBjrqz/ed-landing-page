@@ -1,7 +1,6 @@
 <script lang="ts" setup>
     import { Rocket, Smile, Package, Shapes, Plus, Percent } from 'lucide-vue-next';
 
-    const EdCounters = ref<HTMLElement | null>(null);
     const counterStats = [
         {
             icon: Rocket,
@@ -32,7 +31,7 @@
 
 <template>
     <section
-        ref="EdCounters"
+        id="edCounters"
         class="ed-counters"
     >
         <div class="ed-counters__container">

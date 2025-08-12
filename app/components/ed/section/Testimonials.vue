@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import { ChevronLeft, ChevronRight, Quote } from 'lucide-vue-next'
     
-    const EdTestimonials = ref<HTMLElement | null>(null);
     const current = ref(0)
     const testimonials = [
         {
@@ -23,6 +22,7 @@
     const prev = () => {
       current.value = (current.value - 1 + testimonials.length) % testimonials.length
     }
+
     const next = () => {
       current.value = (current.value + 1) % testimonials.length
     }
@@ -30,7 +30,7 @@
 
 <template>
     <section
-        ref="EdTestimonials"
+        id="edTestimonials"
         class="ed-testimonials"
     >
         <div class="ed-testimonials__container">

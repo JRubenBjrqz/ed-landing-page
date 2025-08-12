@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-    const EdBenefits = ref<HTMLElement | null>(null);
     const benefitCards = [
         {
             img: "new_ideas",
@@ -61,7 +60,7 @@
 
 <template>
     <section
-        ref="EdBenefits"
+        id="edBenefits"
         class="ed-benefits"
     >
         <div class="ed-benefits__container">

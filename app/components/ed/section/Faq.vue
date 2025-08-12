@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    const EdFaq = ref<HTMLElement | null>(null);
   	const faqs = [
   		{
   			question: "What Services Do You Offer?",
@@ -33,7 +32,7 @@
 
 <template>
 	<section
-	    ref="EdFaq"
+	    id="edFaq"
 	    class="py-20 md:py-32 w-full max-w-[var(--ed-xl)]"
 	>
 		<div class="container mx-auto px-4 lg:px-16">

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   	import { MessageCircle, Monitor, Search, Star } from 'lucide-vue-next';
 
-    const EdSteps = ref<HTMLElement | null>(null);
     const stepRows = [
         {
     		icon: MessageCircle,
@@ -29,7 +28,7 @@
 
 <template>
 	<section
-	    ref="EdSteps" 
+	    ref="edSteps" 
 	    class="ed-steps"
 	>
 		<div class="ed-steps__container">

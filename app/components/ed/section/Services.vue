@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { TabsRoot, TabsList, TabsTrigger, TabsContent } from 'reka-ui'
 import { ChevronUp, ChevronDown } from 'lucide-vue-next'
 // import { Button } from '@/components/ui/button.vue'

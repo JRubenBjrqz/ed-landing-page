@@ -10,11 +10,11 @@
         { name: "Home", id: "edHero" },
         { name: "About", id: "edAbout" },
         { name: "Benefits", id: "edBenefits" },
-        { name: "Portfolio", id: "edPortfolio" },
-        { name: "Services", id: "edServices" },
-        { name: "Reviews", id: "edReviews" },
+        { name: "Portfolio", id: "edCounters" },
+        // { name: "Services", id: "edServices" },
+        { name: "Reviews", id: "edTestimonials" },
         { name: "FAQ", id: "edFaq" },
-        { name: "Contact Us", id: "edContact" },
+        { name: "Contact Us", id: "edForm" },
     ];
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -33,6 +33,7 @@
     
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id)
+
         if (section) {
           section.scrollIntoView({ behavior: 'smooth' })
           props.closeNav()

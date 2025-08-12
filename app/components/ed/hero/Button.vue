@@ -1,9 +1,20 @@
 <script lang="ts" setup>
 	import { MessageCircle } from 'lucide-vue-next';
+	
+	const handleClick = () => {
+        const contactSection = document.getElementById('edForm');
+
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 </script>
 
 <template>
-	<button class="ed-hero-button group">
+	<button
+	    class="ed-hero-button group"
+		@click="handleClick"
+	>
 		<div class="ed-hero-button__icon-container">
 			<MessageCircle
 				class="ed-hero-button__icon"
