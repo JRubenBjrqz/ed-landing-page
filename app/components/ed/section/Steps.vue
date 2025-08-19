@@ -4,7 +4,8 @@
     const stepRows = [
         {
     		icon: MessageCircle,
-    		title: 'Lets Talk And Plan.',
+    		title: 'Lets Talk And',
+          	subtitle: 'Plan.',
     		description: 'We meet to understand your business, your goals, and what you want. This is where we share first ideas.',
         },
         {
@@ -27,10 +28,11 @@
 </script>
 
 <template>
-	<section
-	    ref="edSteps" 
-	    class="ed-steps"
-	>
+    <main
+        id="edSteps"
+        class="ed-steps"
+    >
+        <section class="ed-steps__section">
 		<div class="ed-steps__container">
 			<div class="ed-steps__container-title">
 				<h2 class="ed-steps__title">Our Easy Steps</h2>
@@ -46,12 +48,16 @@
 			/>
 		</div>
 	</section>
+    </main>
 </template>
 
 <style lang="scss" scoped>
 	.ed-steps {
-		@apply min-h-screen w-full max-w-[var(--ed-xl)]
-		    py-20 md:py-32;
+		@apply w-full bg-[var(--ed-white-background)];
+		
+		&__section {
+		    @apply py-24;
+		}
 		
 		&__container {
 			@apply container mx-auto px-4 lg:px-16;

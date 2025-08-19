@@ -30,33 +30,38 @@
 </script>
 
 <template>
-    <section
+    <main
         id="edCounters"
         class="ed-counters"
     >
-        <div class="ed-counters__container">
-            <h2 class="ed-counters__title">
-                We Build Great Things. They Grew.
-            </h2>
-            <div class="ed-counters__container-stats">
-                <EdCounterStat
-                    v-for="(counter, index) in counterStats"
-                    :key="index"
-                    :icon="counter.icon"
-                    :label="counter.label"
-                    :count="counter.count"
-                    :suffix="counter.suffix"
-                />
+        <section class="ed-counters__section">
+            <div class="ed-counters__container">
+                <h2 class="ed-counters__title">
+                    We Build Great Things. They Grew.
+                </h2>
+                <div class="ed-counters__container-stats">
+                    <EdCounterStat
+                        v-for="(counter, index) in counterStats"
+                        :key="index"
+                        :icon="counter.icon"
+                        :label="counter.label"
+                        :count="counter.count"
+                        :suffix="counter.suffix"
+                    />
+                </div>
+                <!-- Marquee -->
             </div>
-            <!-- <div class="relative mt-20 h-40 flex items-center justify-center overflow-hidden">
-            </div> -->
-        </div>
-    </section>
+        </section>
+    </main>
 </template>
 
 <style lang="scss" scoped>
     .ed-counters {
-        @apply py-20 md:py-24 min-h-screen w-full max-w-[var(--ed-xl)];
+        @apply w-full bg-[var(--ed-white-2-background)];
+        
+        &__section {
+            @apply py-24;
+        }
         
         &__container {
             @apply container mx-auto px-4 lg:px-16;

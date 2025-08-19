@@ -31,32 +31,71 @@
 </script>
 
 <template>
-	<section
-	    id="edFaq"
-	    class="py-20 md:py-32 w-full max-w-[var(--ed-xl)]"
+	<main
+   	    id="edFaq"
+        class="ed-faq"
 	>
-		<div class="container mx-auto px-4 lg:px-16">
-			<div class="flex items-center justify-between mb-12">
-				<h2 class="text-4xl font-extrabold md:text-5xl">You Ask We Answer</h2>
-			</div>
-			<div class="grid grid-cols-4 gap-8 mb-8">
-				<EdFaqItem
-					v-for="(faq, idx) in firstRowFaqs"
-					:key="idx"
-					:question="faq.question"
-					:answer="faq.answer"
-				/>
-				<div></div> <!-- Último cuadro vacío -->
-			</div>
-			<div class="grid grid-cols-4 gap-8">
-				<div></div> <!-- Primer cuadro vacío -->
-				<EdFaqItem
-					v-for="(faq, idx) in secondRowFaqs"
-					:key="idx"
-					:question="faq.question"
-					:answer="faq.answer"
-				/>
-			</div>
-		</div>
-	</section>
+    	<section
+    	    class="ed-faq__section"
+    	>
+    		<div class="ed-faq__container">
+                <h2 class="ed-faq__title">You Ask We Answer</h2>
+    			<div class="ed-faq__grid">
+    				<EdFaqItem
+    					v-for="(faq, idx) in firstRowFaqs"
+    					:key="idx"
+    					:question="faq.question"
+    					:answer="faq.answer"
+    				/>
+    				<div>
+                        <NuxtImg
+                            src="https://placehold.co/248x248/EEE/31343C"
+                            class="ed-faq__img"
+                        />
+                    </div>
+    			</div>
+    			<div class="ed-faq__grid">
+       				<div>
+                        <NuxtImg
+                            src="https://placehold.co/248x248/EEE/31343C"
+                            class="ed-faq__img"
+                        />
+                    </div>
+    				<EdFaqItem
+    					v-for="(faq, idx) in secondRowFaqs"
+    					:key="idx"
+    					:question="faq.question"
+    					:answer="faq.answer"
+    				/>
+    			</div>
+    		</div>
+    	</section>
+	</main>
 </template>
+
+<style lang="scss" scoped>
+    .ed-faq {
+        @apply w-full bg-[var(--ed-white-background)];
+        
+        &__section {
+            @apply py-24;
+        }
+        
+        &__container {
+            @apply container mx-auto px-4 lg:px-16;
+        }
+        
+        &__title {
+            @apply text-5xl font-extrabold mb-12;
+        }
+        
+        &__grid {
+            @apply grid grid-cols-4 gap-8 mb-8;
+            grid-template-columns: repeat(auto-fit, 259px)
+        }
+        
+        &__img {
+            @apply w-full h-full;
+        }
+    }
+</style>

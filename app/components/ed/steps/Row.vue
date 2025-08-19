@@ -47,7 +47,8 @@
         }
     
         &__header-number {
-            @apply text-8xl font-extrabold py-2 ;
+            @apply text-8xl font-medium py-2 bg-clip-text text-transparent;
+            background-image: var(--ed-number-gradient);
         }
     
         &__header-title {
@@ -56,7 +57,7 @@
     
         &__description {
             @apply flex-grow text-left md:w-1/2 max-w-[353px]
-                text-base;
+                text-base leading-tight;
             font-family: var(--ed-work-sans);
         }
     }

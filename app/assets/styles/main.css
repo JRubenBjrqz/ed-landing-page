@@ -10,11 +10,14 @@
   --ed-primary: #FF742A;
   --ed-white: #FDFDFD;
   --ed-gray: #FBFBFB;
+  --ed-light-pink: #FFB1B2;
   --ed-light-background: #F8F2EF;
   --ed-white-background: #FBFBFB;
+  --ed-white-2-background: #FDFDFD;
 
   /* Gradients */
-  --ed-primary-gradient: linear-gradient(90deg, #FF742A 0%, #FFB1B2 100%);
+  --ed-primary-gradient: linear-gradient(90deg, var(--ed-primary) 0%, var(--ed-light-pink) 100%);
+  --ed-number-gradient: linear-gradient(228.23deg, var(--ed-light-pink) 37.89%, var(--ed-primary) 82.27%);
 
   /* Borders */
   --ed-border-standard: rgba(35, 38, 49, 1);

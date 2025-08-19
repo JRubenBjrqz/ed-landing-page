@@ -18,6 +18,11 @@
                 </h1>
                 <EdHeroButton />
             </div>
+            <NuxtImg
+                src="https://placehold.co/422x556/EEE/31343C"
+                width="422"
+                class="col-start-4 col-span-2"
+            />
         </section>
     </main>
 </template>

@@ -59,38 +59,43 @@
 </script>
 
 <template>
-    <section
+    <main
         id="edBenefits"
         class="ed-benefits"
     >
-        <div class="ed-benefits__container">
-            <div class="ed-benefits__container-title">
-                <h2 class="ed-benefits__title">
-                    Why Are We The Best?
-                </h2>
+        <section class="ed-benefits__section">
+            <div class="ed-benefits__container">
+                <div class="ed-benefits__container-title">
+                    <h2 class="ed-benefits__title">
+                        Why Are We The Best?
+                    </h2>
+                </div>
+                <div class="ed-benefits__container_card">
+                    <EdBenefitsCard
+                        v-for="(card, index) in benefitCards"
+                        :key="index"
+                        :img="card.img"
+                        :width="card.width"
+                        :height="card.height"
+                        :title="card.title"
+                        :description="card.description"
+                    />
+                </div>
             </div>
-            <div class="ed-benefits__container_card">
-                <EdBenefitsCard
-                    v-for="(card, index) in benefitCards"
-                    :key="index"
-                    :img="card.img"
-                    :width="card.width"
-                    :height="card.height"
-                    :title="card.title"
-                    :description="card.description"
-                />
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </template>
 
 <style lang="scss" scoped>
     .ed-benefits {
-        @apply min-h-screen flex py-24
-            items-center w-full max-w-[var(--ed-xl)];
+        @apply w-full z-10 bg-[var(--ed-white-2-background)];
+        
+        &__section {
+            @apply flex py-24 items-center;
+        }
         
         &__container {
-            @apply mx-auto px-4 lg:pr-16 lg:px-0;
+            @apply min-w-full mx-auto;
         }
         
         &__container-title {
@@ -103,9 +108,10 @@
         }
         
         &__container_card {
-            @apply grid grid-cols-1 sm:grid-cols-2 
+            @apply grid grid-cols-1 sm:grid-cols-2
                 lg:grid-cols-4 gap-x-8 mx-auto
                 justify-center items-center;
+            grid-template-columns: repeat(auto-fit, 256px);
         }
     }
 

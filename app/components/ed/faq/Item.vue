@@ -6,8 +6,20 @@
 </script>
 
 <template>
-	<div>
-		<h3 class="text-2xl font-bold" style="font-family: var(--ed-fira-sans);">{{ question }}</h3>
-		<p class="text-base mt-2" style="font-family: var(--ed-dm-sans)">{{ answer }}</p>
+	<div class="ed-faq-item">
+		<h3 class="ed-faq-item__question">{{ question }}</h3>
+		<p class="ed-faq-item__answer">{{ answer }}</p>
 	</div>
 </template>
+
+<style lang="scss" scoped>
+    .ed-faq-item {
+        &__question {
+            @apply text-2xl font-bold;
+        }
+        
+        &__answer {
+            @apply text-base mt-2 leading-tight;
+        }
+    }
+</style>
