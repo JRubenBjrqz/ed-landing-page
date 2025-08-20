@@ -1,15 +1,9 @@
 <script setup lang="ts">
     import { ArrowRight } from 'lucide-vue-next'
-    
+
     const name = ref('')
     const email = ref('')
     const message = ref('')
-    const label = ref('Name')
-    
-    function submitForm() {
-      // Aquí puedes manejar el envío del formulario
-      // Por ejemplo, enviar los datos a una API o mostrar un mensaje de éxito
-    }
 </script>
 
 <template>
@@ -42,23 +36,26 @@
                         <EdFormInput
                             v-model="email"
                             name="Email"
-                            type="text"
+                            type="email"
                             required
                             label="Email"
                         />
-                        <textarea
-                            name="Message"
+                        <EdFormTextArea
                             v-model="message"
-                            placeholder="Message"
-                            class="min-h-[120px] w-full border-b border-gray-400 bg-transparent py-3 focus:ring-0"
+                            name="Message"
                             required
-                        ></textarea>
+                            label="Message"
+                        />
                         <button
-                            class="flex mt-8 rounded-full px-8 py-6 text-lg font-semibold bg-transparent border"
                             type="submit"
+                            class="group flex items-center mt-8 rounded-full px-8 py-3 text-lg font-extrabold border border-black bg-white transition-colors duration-200 focus:outline-none hover:bg-[#232631] hover:text-white"
                         >
-                            Send Message
-                            <ArrowRight class="ml-2 h-5 w-5" />
+                            <span class="mr-4 transition-colors duration-200 group-hover:text-white">Send Message</span>
+                            <span
+                                class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#FF742A] to-[#FFB1B2] text-white transition-colors duration-200 group-hover:bg-[#232631 group-hover:from-transparent group-hover:to-transparent group-active:bg-[#1a1b22] group-active:text-gray-400"
+                            >
+                                <ArrowRight class="h-5 w-5" />
+                            </span>
                         </button>
                     </form>
                 </div>

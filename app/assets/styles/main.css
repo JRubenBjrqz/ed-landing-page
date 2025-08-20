@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-p, a, li, button, NuxtLink {
+p, a, li, button, input, textarea, label, NuxtLink {
   font-family: var(--ed-work-sans);
   color: var(--ed-black);
   margin: 0;

@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-    const props = defineProps<{
+    defineProps<{
         label: string
         name: string
+        type: string
+        required: boolean
     }>()
     
     const model = defineModel('modelValue', {
@@ -11,23 +13,24 @@
 </script>
 
 <template>
-    <div class="relative w-full">
-        <input
-            v-model="model"
-            :name="name"
-            type="text"
-            class="w-full border-b border-gray-400 bg-transparent py-3 focus:ring-0 focus:border-black focus:outline-none peer"
-            required
-            placeholder=""
-        />
-        <label
-            class="absolute left-0 top-3 text-gray-400 transition-all duration-200
-                pointer-events-none
-                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-black
-                peer-placeholder-shown:top-3 peer-placeholder-shown:text-base"
-            :class="name ? '-top-3 text-xs text-black' : 'top-3 text-base'"
-            >
-            {{ label }}
-        </label>
-    </div>
+  <div class="relative w-full">
+    <input
+      v-model="model"
+      :name="name"
+      :type="type"
+      :required="required"
+      class="peer w-full border-b bg-transparent py-3 focus:ring-0 focus:outline-none transition-colors duration-200 focus:border-[var(--ed-primary)]"
+      :class="model ? 'border-[var(--ed-primary)]' : 'border-black'"
+    />
+    <label
+      class="absolute left-0 transition-all duration-200 pointer-events-none"
+      :class="model
+        ? '-top-3 text-xs text-[var(--ed-primary)]'
+        : 'top-3 text-base text-gray-400'
+      "
+    >
+      {{ label }}
+    </label>
+  </div>
 </template>
+
