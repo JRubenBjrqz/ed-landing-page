@@ -5,48 +5,53 @@
 @import "@fontsource-variable/dm-sans";
 
 :root {
-  /* Colors */
-  --ed-black: #232631;
-  --ed-primary: #FF742A;
-  --ed-white: #FDFDFD;
-  --ed-gray: #FBFBFB;
-  --ed-light-pink: #FFB1B2;
-  --ed-light-background: #F8F2EF;
-  --ed-white-background: #FBFBFB;
-  --ed-white-2-background: #FDFDFD;
+    /* Colors */
+    --ed-black: #232631;
+    --ed-primary: #FF742A;
+    --ed-white: #FDFDFD;
+    --ed-gray: #FBFBFB;
+    --ed-light-pink: #FFB1B2;
+    --ed-light-background: #F8F2EF;
+    --ed-white-background: #FBFBFB;
+    --ed-white-2-background: #FDFDFD;
+    --ed-gray: #919298;
 
-  /* Gradients */
-  --ed-primary-gradient: linear-gradient(90deg, var(--ed-primary) 0%, var(--ed-light-pink) 100%);
-  --ed-number-gradient: linear-gradient(228.23deg, var(--ed-light-pink) 37.89%, var(--ed-primary) 82.27%);
+    /* Gradients */
+    --ed-primary-gradient: linear-gradient(90deg, var(--ed-primary) 0%, var(--ed-light-pink) 100%);
+    --ed-number-gradient: linear-gradient(228.23deg, var(--ed-light-pink) 37.89%, var(--ed-primary) 82.27%);
 
-  /* Borders */
-  --ed-border-standard: rgba(35, 38, 49, 1);
-  --ed-border-light: rgba(35, 38, 49, 0.2);
+    /* Borders */
+    --ed-border-standard: rgba(35, 38, 49, 1);
+    --ed-border-light: rgba(35, 38, 49, 0.2);
 
-  /* Shadows */
-  --ed-shadow: 6px -8px 20.1px 0px rgba(35, 38, 49, 0.11);
+    /* Shadows */
+    --ed-shadow: 6px -8px 20.1px 0px rgba(35, 38, 49, 0.11);
 
-  /* Fonts */
-  --ed-fira-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
-  --ed-work-sans: 'Work Sans Variable', Georgia, serif;
-  --ed-dm-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
-  
-  /* Sizes */
-  --ed-xl: 1360px;
+    /* Fonts */
+    --ed-fira-sans: 'Fira Sans', ui-sans-serif, system-ui, sans-serif;
+    --ed-work-sans: 'Work Sans Variable', Georgia, serif;
+    --ed-dm-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
+    
+    /* Sizes */
+    --ed-xl: 1360px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ed-fira-sans);
-  color: var(--ed-black);
-  margin: 0;
+    font-family: var(--ed-fira-sans);
+    color: var(--ed-black);
+    margin: 0;
 }
 
 p, a, li, button, input, textarea, label, NuxtLink {
-  font-family: var(--ed-work-sans);
-  color: var(--ed-black);
-  margin: 0;
+    font-family: var(--ed-work-sans);
+    color: var(--ed-black);
+    margin: 0;
 }
 
 section {
     @apply min-h-screen w-full max-w-[var(--ed-xl)] p-4 mx-auto;
+}
+
+body {
+    background-color: var(--ed-white-2-background);
 }

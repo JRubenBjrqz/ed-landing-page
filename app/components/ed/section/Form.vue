@@ -1,6 +1,4 @@
 <script setup lang="ts">
-    import { ArrowRight } from 'lucide-vue-next'
-
     const name = ref('')
     const email = ref('')
     const message = ref('')
@@ -46,17 +44,9 @@
                             required
                             label="Message"
                         />
-                        <button
+                        <EdFormButton
                             type="submit"
-                            class="group flex items-center mt-8 rounded-full px-8 py-3 text-lg font-extrabold border border-black bg-white transition-colors duration-200 focus:outline-none hover:bg-[#232631] hover:text-white"
-                        >
-                            <span class="mr-4 transition-colors duration-200 group-hover:text-white">Send Message</span>
-                            <span
-                                class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#FF742A] to-[#FFB1B2] text-white transition-colors duration-200 group-hover:bg-[#232631 group-hover:from-transparent group-hover:to-transparent group-active:bg-[#1a1b22] group-active:text-gray-400"
-                            >
-                                <ArrowRight class="h-5 w-5" />
-                            </span>
-                        </button>
+                        />
                     </form>
                 </div>
           </div>
@@ -73,11 +63,11 @@
         }
         
         &__container {
-            @apply flex w-full gap-12;
+            @apply flex flex-col lg:flex-row w-full gap-12;
         }
         
         &__title {
-            @apply text-8xl font-extrabold leading-tight max-w-lg;
+            @apply text-5xl md:text-8xl font-extrabold leading-tight w-full lg:max-w-lg;
         }
         
         &__form-container {

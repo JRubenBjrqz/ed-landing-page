@@ -3,7 +3,7 @@
         id="edHero"
         class="ed-hero"
     >
-        <EdHeroBlobs />
+        <!-- <EdHeroBlobs /> -->
         <section class="ed-hero__section">
             <div
                 class="ed-hero__container"
@@ -19,9 +19,9 @@
                 <EdHeroButton />
             </div>
             <NuxtImg
-                src="https://placehold.co/422x556/EEE/31343C"
-                width="422"
-                class="col-start-4 col-span-2"
+                src="https://easydevs.us/images/blob.avif"
+                class="ed-hero__img"
+                width="560"
             />
         </section>
     </main>
@@ -42,7 +42,7 @@
         }
         
         &__phrase {
-            @apply text-[4rem] leading-[1.2] capitalize md:leading-[77px]
+            @apply text-6xl  md:text-[4rem] leading-[1.2] capitalize md:leading-[77px]
            		w-full flex flex-col font-bold;
         }
         
@@ -52,6 +52,10 @@
         
         &__easy {
             @apply font-light italic;
+        }
+
+        &__img {
+            @apply hidden lg:block col-start-4 col-span-2 mt-8 lg:mt-0 pointer-events-none select-none;
         }
     }
 </style>

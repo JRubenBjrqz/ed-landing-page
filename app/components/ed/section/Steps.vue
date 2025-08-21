@@ -5,7 +5,7 @@
         {
     		icon: MessageCircle,
     		title: 'Lets Talk And',
-          	subtitle: 'Plan.',
+        	subtitle: 'Plan.',
     		description: 'We meet to understand your business, your goals, and what you want. This is where we share first ideas.',
         },
         {
@@ -69,7 +69,6 @@
 
 		&__title {
 			@apply text-5xl font-bold;
-			font-family: var(--ed-fira-sans);
 		}
 	}
 </style>

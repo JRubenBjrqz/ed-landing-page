@@ -4,17 +4,17 @@
 	const socialMediaLinks = [
 		{ icon: Copy, text: '(217) 555-0134' },
 		{ text: 'San Diego, CA', underline: false, },
-		{ icon: ArrowUpRight, text: 'sales@easydevs.com', },
-		{ icon: ArrowUpRight, text: 'Linkedin', },
-		{ icon: ArrowUpRight, text: 'Facebook', },
+		{ icon: ArrowUpRight, text: 'hello@easydevs.us', },
+		{ icon: ArrowUpRight, text: 'Linkedin', link: 'https://www.linkedin.com/company/easydevs-us/about/' },
+		{ icon: ArrowUpRight, text: 'Facebook', link: 'https://www.facebook.com/easydevs.us' },
 		{ icon: ArrowUpRight, text: 'Youtube', },
-		{ icon: ArrowUpRight, text: 'Instagram', },
-		{ icon: ArrowUpRight, text: 'X', borderRight: false },
+		{ icon: ArrowUpRight, text: 'Instagram', link: 'https://www.instagram.com/easydevs.us' },
+		{ icon: ArrowUpRight, text: 'X', borderRight: false, link: 'https://x.com/easydevsus' },
 	];
 </script>
 
 <template>
-	<div class="mt-12 flex flex-wrap items-center justify-center border-t border-b border-[var(--ed-black)]">
+	<div class="ed-footer-social-media">
 		<EdFooterSocialMediaButton
 			v-for="(link, index) in socialMediaLinks"
 			:key="index"
@@ -22,6 +22,13 @@
 			:text="link.text"
 			:underline="link.underline"
 			:border-right="link.borderRight"
+			@go-to="navigateTo(link.link, { open: { target: '_blank' } })"
 		/>
 	</div>
 </template>
+
+<style lang="scss" scoped>
+	.ed-footer-social-media {
+		@apply mt-12 flex flex-wrap items-center justify-center border-t border-b border-[var(--ed-black)];
+	}
+</style>

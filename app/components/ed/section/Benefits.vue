@@ -70,7 +70,7 @@
                         Why Are We The Best?
                     </h2>
                 </div>
-                <div class="ed-benefits__container_card">
+                <div class="ed-benefits__container-card">
                     <EdBenefitsCard
                         v-for="(card, index) in benefitCards"
                         :key="index"
@@ -79,6 +79,7 @@
                         :height="card.height"
                         :title="card.title"
                         :description="card.description"
+                        class="mt-6 lg:mt-0"
                     />
                 </div>
             </div>
@@ -103,43 +104,49 @@
         }
         
         &__title {
-            @apply text-5xl font-extrabold md:text-5xl text-right;
-            font-family: var(--ed-fira-sans);
+            @apply text-5xl font-extrabold md:text-5xl text-right
+                mb-12 xl:mb-0;
         }
         
-        &__container_card {
+        &__container-card {
             @apply grid grid-cols-1 sm:grid-cols-2
                 lg:grid-cols-4 gap-x-8 mx-auto
                 justify-center items-center;
             grid-template-columns: repeat(auto-fit, 256px);
         }
+
+        &__card {
+            @apply mt-6 lg:mt-0;
+        }
     }
 
-    .ed-benefits__container_card > *:nth-child(3n + 1) {
-        margin-top: 0;
-    }
+    @media (min-width: 1167px) {
+        .ed-benefits__container-card > *:nth-child(3n + 1) {
+            margin-top: 0;
+        }
 
-    .ed-benefits__container_card > *:nth-child(3n + 2) {
-        margin-top: 3rem;
-    }
+        .ed-benefits__container-card > *:nth-child(3n + 2) {
+            margin-top: 3rem;
+        }
 
-    .ed-benefits__container_card > *:nth-child(3n + 3) {
-        margin-top: 6rem;
-    }
+        .ed-benefits__container-card > *:nth-child(3n + 3) {
+            margin-top: 6rem;
+        }
 
-    .ed-benefits__container_card > *:nth-child(3n + 4) {
-        margin-top: 9rem;
-    }
-    
-    .ed-benefits__container_card > *:nth-child(3n + 5) {
-        margin-top: 0rem;
-    }
-    
-    .ed-benefits__container_card > *:nth-child(3n + 6) {
-        margin-top: 3rem;
-    }
-    
-    .ed-benefits__container_card > *:nth-child(3n + 7) {
-        margin-top: 6rem;
+        .ed-benefits__container-card > *:nth-child(3n + 4) {
+            margin-top: 9rem;
+        }
+
+        .ed-benefits__container-card > *:nth-child(3n + 5) {
+            margin-top: 0rem;
+        }
+
+        .ed-benefits__container-card > *:nth-child(3n + 6) {
+            margin-top: 3rem;
+        }
+
+        .ed-benefits__container-card > *:nth-child(3n + 7) {
+            margin-top: 6rem;
+        }
     }
 </style>

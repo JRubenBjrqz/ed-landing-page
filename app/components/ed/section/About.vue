@@ -32,11 +32,11 @@
                         </p>
                     </div>
                 </div>
-                <NuxtImg
-                    src="https://placehold.co/356x356/EEE/31343C"
-                    width="343"
-                    class="ed-about__img"
-                />
+                <div class="h-full w-[270px] md:w-[360px] my-auto ml-auto mr-auto lg:mr-0">
+                    <NuxtImg
+                        src="https://easydevs.us/images/about-graphic.avif"
+                    />
+                </div>
             </div>
         </section>
     </main>
@@ -47,16 +47,17 @@
         @apply w-full z-10 bg-[var(--ed-white-background)];
         
         &__section {
-            @apply flex flex-col justify-center text-left px-3
+            @apply py-24 flex flex-col justify-center text-left px-3
                 md:px-0 gap-6 w-full;
         }
     			
     	&__container {
-    	    @apply flex flex-row justify-between md:px-32 leading-none;
+    	    @apply flex flex-col gap-10 lg:gap-0 md:flex-row 
+                md:justify-between md:px-16 lg:px-32 leading-none;
     	}
      
         &__paragraph {
-            @apply flex flex-col gap-6;
+            @apply flex flex-col gap-6 mx-auto md:mx-0;
         }
         
         &__img {

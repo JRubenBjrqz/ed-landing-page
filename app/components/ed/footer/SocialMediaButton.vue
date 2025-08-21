@@ -35,6 +35,5 @@
     .ed-social-media-button {
         @apply flex items-center gap-2.5 text-base text-[var(--ed-black)] 
             cursor-pointer p-4 hover:text-[var(--ed-primary)] transition-colors duration-300;
-        font-family: var(--ed-dm-sans);
     }
 </style>
