@@ -9,8 +9,8 @@
 </script>
 
 <template>
-    <div class="ed-benefits-card">
-        <div class="ed-benefits-card__header">
+    <div :class="['ed-benefits-card']">
+        <div :class="['ed-benefits-card__header', props.img === 'focus_people' ? 'mt-6 md:mt-0' : '']">
             <NuxtImg
                 :src="`/img/${props.img}.png`"
                 :alt="props.title"

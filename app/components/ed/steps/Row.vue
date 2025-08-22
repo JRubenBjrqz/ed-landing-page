@@ -25,7 +25,7 @@
         <div class="ed-steps-row__description">
             <p>{{props.description}}</p>
         </div>
-        <div class="flex-shrink-0 flex justify-end items-start mb-auto ml-auto lg:ml-0">
+        <div class="ed-steps-row__icon-container">
             <component
                 :is="props.icon"
                 size="32"
@@ -43,7 +43,7 @@
     
         &__header {
             @apply flex items-center gap-x-4 flex-shrink-0
-                text-left;
+                text-left order-2 lg:order-1;
         }
     
         &__header-number {
@@ -57,8 +57,13 @@
     
         &__description {
             @apply flex-grow text-left lg:w-1/2 lg:max-w-[353px]
-                text-base leading-tight;
+                text-base leading-tight order-3 lg:order-2;
             font-family: var(--ed-work-sans);
+        }
+
+        &__icon-container {
+            @apply flex-shrink-0 flex justify-end items-start
+                mb-auto ml-auto lg:ml-0 order-1 lg:order-3;
         }
     }
 </style>

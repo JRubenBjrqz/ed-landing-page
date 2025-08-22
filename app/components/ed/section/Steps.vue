@@ -33,21 +33,21 @@
         class="ed-steps"
     >
         <section class="ed-steps__section">
-		<div class="ed-steps__container">
-			<div class="ed-steps__container-title">
-				<h2 class="ed-steps__title">Our Easy Steps</h2>
+			<div class="ed-steps__container">
+				<div class="ed-steps__container-title">
+					<h2 class="ed-steps__title">Our Easy Steps</h2>
+				</div>
+				<EdStepsRow
+					v-for="(row, index) in stepRows"
+					:key="index"
+					:number="index + 1"
+					:title="row.title"
+					:description="row.description"
+					:subtitle="row.subtitle"
+					:icon="row.icon"
+				/>
 			</div>
-			<EdStepsRow
-				v-for="(row, index) in stepRows"
-				:key="index"
-				:number="index + 1"
-				:title="row.title"
-				:description="row.description"
-				:subtitle="row.subtitle"
-				:icon="row.icon"
-			/>
-		</div>
-	</section>
+		</section>
     </main>
 </template>
 

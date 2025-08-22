@@ -32,7 +32,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="h-full w-[270px] md:w-[360px] my-auto ml-auto mr-auto lg:mr-0">
+                <div class="ed-about__img-container">
                     <NuxtImg
                         src="https://easydevs.us/images/about-graphic.avif"
                     />
@@ -57,7 +57,7 @@
     	}
      
         &__paragraph {
-            @apply flex flex-col gap-6 mx-auto md:mx-0;
+            @apply flex flex-col gap-6 px-8 md:px-0 md:mx-0;
         }
         
         &__img {
@@ -65,12 +65,16 @@
         }
     	
     	&__title {
-           	@apply flex flex-col gap-1 text-5xl font-bold
+           	@apply flex md:flex-col gap-3 md:gap-1 text-5xl font-bold
                 leading-tight break-words;
     	}
     	
     	&__description {
-            @apply max-w-[328px] flex flex-col gap-3 text-base ml-14;
+            @apply md:max-w-[328px] flex flex-col gap-3 text-base ml-14;
     	}
+
+        &__img-container {
+            @apply h-full w-[270px] md:w-[360px] my-auto ml-auto mr-auto lg:mr-0;
+        }
     }
 </style>

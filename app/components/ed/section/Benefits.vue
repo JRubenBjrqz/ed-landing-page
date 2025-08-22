@@ -79,7 +79,7 @@
                         :height="card.height"
                         :title="card.title"
                         :description="card.description"
-                        class="mt-6 lg:mt-0"
+                        class="ed-benefits__card"
                     />
                 </div>
             </div>

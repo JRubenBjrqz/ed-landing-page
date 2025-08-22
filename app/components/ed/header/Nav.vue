@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+    import { Motion, AnimatePresence, motion } from 'motion-v'
+
     const props = defineProps<{
         isOpen: boolean;
         closeNav: () => void;
@@ -42,21 +44,27 @@
 </script>
 
 <template>
-    <div
-        ref="edHeaderNav"
-        class="ed-header-nav"
-    >
-        <nav class="ed-header-nav__nav">
-            <NuxtLink
-                v-for="link in navLinks"
-                :key="link.id"
-                class="ed-header-nav__link"
-                @click="scrollToSection(link.id)"
-            >
-                {{ link.name }}
-            </NuxtLink>
-        </nav>
-    </div>
+    <AnimatePresence>
+        <motion.div
+            v-if="props.isOpen"
+            ref="edHeaderNav"
+            class="ed-header-nav"
+            :initial="{ opacity: 0, y: -8, scale: 0.98 }"
+            :animate="{ opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 420, damping: 30, mass: 0.5 } }"
+            :exit="{ opacity: 0, y: -8, scale: 0.98, transition: { duration: 0.15 } }"
+        >
+            <nav class="ed-header-nav__nav">
+                <NuxtLink
+                    v-for="link in navLinks"
+                    :key="link.id"
+                    class="ed-header-nav__link"
+                    @click="scrollToSection(link.id)"
+                >
+                    {{ link.name }}
+                </NuxtLink>
+            </nav>
+        </motion.div>
+    </AnimatePresence>
 </template>
 
 <style lang="scss" scoped>

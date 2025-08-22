@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-lucide-icons",
     "reka-ui/nuxt",
+    "motion-v/nuxt"
   ],
   tailwindcss: {
     exposeConfig: true,

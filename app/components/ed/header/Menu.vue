@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
     const isOpen = ref(false);
     const isScrolled = ref(false);
     
@@ -27,7 +28,6 @@
                 @toggleMenu="isOpen = !isOpen"
             />
             <EdHeaderNav
-                v-if="isOpen"
                 :isOpen="isOpen"
                 :closeNav="closeNav"
             />
