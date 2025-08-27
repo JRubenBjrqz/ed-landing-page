@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-    import { Rocket, Smile, Package, Shapes, Plus, Percent } from 'lucide-vue-next';
+    import {Rocket, Smile, Package, Shapes, Plus, Percent} from 'lucide-vue-next';
 
     const counterStats = [
         {
@@ -47,9 +47,12 @@
                         :label="counter.label"
                         :count="counter.count"
                         :suffix="counter.suffix"
+                        :index="index"
                     />
                 </div>
-                <!-- Marquee -->
+                <div class="mt-16">
+                    <EdCounterMarquee/>
+                </div>
             </div>
         </section>
     </main>
@@ -69,11 +72,11 @@
     
         &__title {
             @apply text-left text-5xl font-extrabold mb-16;
-            font-family: var(--ed-fira-sans);
         }
     
         &__container-stats {
-            @apply mt-16 grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-x divide-[var(--ed-border)];
+            @apply mt-16 grid gap-12 grid-cols-1 sm:grid-cols-2
+                lg:grid-cols-4;
         }
     }
 </style>
