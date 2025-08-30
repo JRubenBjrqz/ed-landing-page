@@ -47,17 +47,17 @@
     					:question="faq.question"
     					:answer="faq.answer"
     				/>
-    				<div>
+    				<div class="ed-faq__img-container">
                         <NuxtImg
-                            src="https://placehold.co/248x248/EEE/31343C"
-                            class="ed-faq__img"
+                            src="/img/faq_down.png"
+							class="ed-faq__img"
                         />
                     </div>
     			</div>
     			<div class="ed-faq__grid">
-       				<div>
+       				<div class="ed-faq__img-container">
                         <NuxtImg
-                            src="https://placehold.co/248x248/EEE/31343C"
+                            src="/img/faq_up.png"
                             class="ed-faq__img"
                         />
                     </div>
@@ -86,16 +86,20 @@
         }
         
         &__title {
-            @apply text-5xl font-extrabold mb-12;
+            @apply text-5xl font-extrabold mb-12 flex justify-end;
         }
         
         &__grid {
-            @apply grid grid-cols-4 gap-8 mb-8;
+            @apply grid grid-cols-4 gap-8 mb-8 justify-center;
             grid-template-columns: repeat(auto-fit, 259px)
         }
+
+		&__img-container {
+			@apply max-w-[259px] max-h-[244px];
+		}
         
         &__img {
-            @apply w-full h-full;
+            @apply w-full pointer-events-none select-none;
         }
     }
 </style>
