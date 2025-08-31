@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { ToastProvider, ToastRoot, ToastTitle, ToastDescription, ToastViewport } from 'reka-ui'
+    import { ToastProvider } from 'reka-ui'
 
     type Phase = 'idle' | 'sending' | 'done' | 'error';
     type FormSubmitResponse = { success?: 'true' | 'false'; message?: string; error?: string };
