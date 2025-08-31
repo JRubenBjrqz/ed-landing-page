@@ -2,12 +2,12 @@
 	import { Copy, ArrowUpRight } from 'lucide-vue-next'
 
 	const socialMediaLinks = [
-		{ icon: Copy, text: '(217) 555-0134' },
-		{ text: 'San Diego, CA', underline: false, },
+		// { icon: Copy, text: '(217) 555-0134' },
+		{ text: 'Phoenix, AZ', underline: false, },
 		{ icon: ArrowUpRight, text: 'hello@easydevs.us', },
 		{ icon: ArrowUpRight, text: 'Linkedin', link: 'https://www.linkedin.com/company/easydevs-us/about/' },
 		{ icon: ArrowUpRight, text: 'Facebook', link: 'https://www.facebook.com/easydevs.us' },
-		{ icon: ArrowUpRight, text: 'Youtube', },
+		// { icon: ArrowUpRight, text: 'Youtube', },
 		{ icon: ArrowUpRight, text: 'Instagram', link: 'https://www.instagram.com/easydevs.us' },
 		{ icon: ArrowUpRight, text: 'X', borderRight: false, link: 'https://x.com/easydevsus' },
 	];
@@ -29,6 +29,8 @@
 
 <style lang="scss" scoped>
 	.ed-footer-social-media {
-		@apply mt-12 flex flex-wrap items-center justify-center border-t border-b border-[var(--ed-black)];
+		@apply mt-12 flex flex-wrap items-center justify-center 
+			border-t border-b border-[var(--ed-black)] max-w-4xl
+			mx-4 md:mx-auto;
 	}
 </style>

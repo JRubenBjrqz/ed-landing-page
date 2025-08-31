@@ -65,7 +65,7 @@
         }
     	
     	&__title {
-           	@apply flex md:flex-col gap-3 md:gap-1 text-5xl font-bold
+           	@apply flex flex-col sm:gap-3 md:gap-1 text-5xl font-bold
                 leading-tight break-words;
     	}
     	

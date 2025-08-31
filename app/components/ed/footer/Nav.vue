@@ -29,14 +29,19 @@
 			>
 				{{ link.name }}
 			</NuxtLink>
-			<span v-if="index < navLinks.length - 1">&bull;</span>
+			<span
+				v-if="index < navLinks.length - 1"
+			>
+				&bull;
+			</span>
 		</template>
 	</nav>
 </template>
 
 <style scoped>
 	.ed-footer__nav {
-		@apply flex flex-wrap items-center justify-end gap-x-5 gap-y-4 text-2xl;
+		@apply flex flex-wrap items-center justify-center
+ 			gap-x-5 gap-y-4 text-2xl px-4 md:px-0;
 		font-family: var(--ed-work-sans);
 	}
 

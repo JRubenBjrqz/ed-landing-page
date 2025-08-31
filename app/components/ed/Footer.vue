@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
   .ed-footer {
-    @apply py-12 bg-[var(--ed-white-2-background)];
+    @apply py-12 bg-[var(--ed-white-2-background)] w-full max-w-[var(--ed-xl)];
 
 	&__container {
 		@apply container mx-auto flex flex-col gap-y-4;

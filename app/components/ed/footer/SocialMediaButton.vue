@@ -19,7 +19,7 @@
         @click="emit('goTo')"
         :class="[
             'ed-social-media-button', 
-            { 'underline': props.underline, 'border-r border-[var(--ed-black)]': props.borderRight }
+            { 'underline': props.underline, 'lg:border-r lg:border-[var(--ed-black)]': props.borderRight }
         ]"
     >
         <span>{{ props.text }}</span>
@@ -33,7 +33,8 @@
 
 <style scoped>
     .ed-social-media-button {
-        @apply flex items-center gap-2.5 text-base text-[var(--ed-black)] 
-            cursor-pointer p-4 hover:text-[var(--ed-primary)] transition-colors duration-300;
+        @apply flex items-center gap-2.5 text-base
+            cursor-pointer p-4 hover:text-[var(--ed-primary)]
+            transition-colors duration-300;
     }
 </style>
