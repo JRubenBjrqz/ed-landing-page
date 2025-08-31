@@ -18,7 +18,7 @@ onBeforeUnmount(() => {
     <header
         :class="[
             'ed-header',
-            isScrolled ? 'bg-[#fff]/30 backdrop-blur-sm' : 'bg-transparent',
+            isScrolled ? 'bg-[#fff]/30 backdrop-blur-md' : 'bg-transparent',
         ]"
     >
         <div class="ed-header__container">
