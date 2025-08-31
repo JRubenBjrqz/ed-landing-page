@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-    import { Motion, AnimatePresence, motion } from 'motion-v'
+    import { AnimatePresence, motion } from 'motion-v'
 
     const props = defineProps<{
         isOpen: boolean;
