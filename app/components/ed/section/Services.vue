@@ -1,4 +1,10 @@
 <script setup lang="ts">
+	import { useBreakpoints } from '@vueuse/core'
+
+	const breakpoints = useBreakpoints({ xs: 0, sm: 640, md: 768, lg: 1024, xl: 1280 })
+	const isMobile = breakpoints.smaller('md')
+	const isTablet = breakpoints.between('md', 'xl')
+	const isExtraLarger = breakpoints.greater('xl')
 
 	const TABS = [
 		{
@@ -268,12 +274,25 @@
 						What We Offer
 					</h1>
 				</div>
-				<EdServicesDesktop
-					:TABS="TABS"
-					:active="active"
-					:current="current"
-					@update:active="active = $event"
-				/>
+				<template v-if="isMobile">
+					Mobile
+				</template>
+				<template v-if="isTablet">
+					<EdServicesTablet
+						:TABS="TABS"
+						:active="active"
+						:current="current"
+						@update:active="active = $event"
+					/>
+				</template>
+				<template v-if="isExtraLarger">
+					<EdServicesDesktop
+						:TABS="TABS"
+						:active="active"
+						:current="current"
+						@update:active="active = $event"
+					/>
+				</template>
 			</div>
 		</section>
 	</main>
@@ -303,84 +322,9 @@
 		&__title {
 			@apply text-5xl font-bold;
 		}
-
-		&__services-tabs {
-			@apply flex items-center mt-8 border-b border-[var(--ed-border-services)];
-		}
-
-		&__tab-buttons {
-			@apply pr-6 py-3 text-base font-medium capitalize transition-all duration-200 relative whitespace-nowrap;
-		}
-		
-		&__tab-border-active {
-			@apply absolute bottom-0 left-0 w-full border-b border-orange-500;
-			transform: scaleX(0);
-			transform-origin: left;
-		}
-
-		&__tab-animation {
-			animation: tabBorderGrow 0.32s cubic-bezier(.4,0,.2,1) forwards;
-		}
-
-		&__tab-grid-first-row {
-			@apply grid grid-cols-5 grid-rows-2 w-full h-[274.5px] gap-0 border-b border-[var(--ed-border-services)];
-
-			&-1 {
-				@apply col-span-1 row-span-2 my-auto px-10 flex items-center text-[32px] font-bold;
-			}
-
-			&-2 {
-				@apply col-span-2 row-span-2 p-4 border-l border-r border-[var(--ed-border-services)] flex justify-start text-base;
-			}
-
-			&-3 {
-				@apply col-span-1 row-span-2 p-4 border-r border-[var(--ed-border-services)] flex items-center justify-center;
-			}
-
-			&-4 {
-				@apply col-span-1 row-span-2 py-4 pl-6 pr-4 flex items-start justify-end;
-
-				& p {
-					@apply w-full text-right text-[var(--ed-primary)] text-base;
-				}
-			}
-		}
-
-		&__tab-grid-second-row {
-			@apply grid grid-cols-5 w-full;
-
-			&-1 {
-				@apply col-span-2 border-r border-[var(--ed-border-services)] flex items-center justify-center;
-			}
-
-			&-2 {
-				@apply col-span-1 border-r border-[var(--ed-border-services)] flex items-center justify-center;
-			}
-
-			&-3 {
-				@apply col-span-2 flex items-center justify-center;
-			}
-
-			&-img-container {
-				@apply relative w-full h-[274.5px];
-			}
-
-			&-img {
-				@apply max-h-full w-full object-cover;
-			}
-		}
 	}
 
-	@keyframes tabBorderGrow {
-		from { transform: scaleX(0); }
-		to { transform: scaleX(1); }
+	section {
+		@apply min-h-0;
 	}
-
-	@keyframes panelPop {
-		0%   { opacity: 0; transform: translateY(10px) scale(0.98); }
-		100% { opacity: 1; transform: translateY(0) scale(1); }
-	}
-
-	.fade-enter-active, .fade-leave-active { transition: opacity 0.28s; }
-	.fade-enter-from, .fade-leave-to { opacity: 0; }
 </style>

@@ -120,46 +120,9 @@
             @apply container mx-auto px-4 lg:px-16;
         }
 
-				&__accordion-title {
+		&__accordion-title {
             @apply text-5xl font-extrabold mb-8;
         }
-
-		// &__accordion-item {
-		// 	@apply py-2 mt-px overflow-hidden;
-		// }
-
-		// &__accordion-header {
-		// 	@apply flex;
-		// }
-
-		// &__accordion-trigger {
-		// 	@apply flex flex-1 cursor-pointer items-center justify-between py-1;
-		// }
-
-		// &__accordion-question {
-		// 	@apply text-2xl font-semibold text-left;
-		// 	}
-
-		// &__accordion-icon {
-		// 	@apply ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180;
-		// }
-
-		// &__accordion-answer {
-		// 	@apply py-2 text-base font-normal;
-		// 	font-family: var(--ed-dm-sans);
-		// }
-
-		// &__accordion-content {
-		// 	@apply overflow-hidden;
-		// }
-
-		// &__accordion-content[data-state="open"] {
-		// 	animation: slideDown 300ms ease-out;
-		// }
-
-		// &__accordion-content[data-state="closed"] {
-		// 	animation: slideUp 300ms ease-out;
-		// }
 
 		&__grid {
 			@apply flex flex-wrap justify-center gap-8;
@@ -187,22 +150,4 @@
 	section {
 		@apply min-h-0;
 	}
-
-	// @keyframes slideDown {
-	// 	from {
-	// 		height: 0;
-	// 	}
-	// 	to {
-	// 		height: var(--reka-accordion-content-height);
-	// 	}
-	// }
-
-	// @keyframes slideUp {
-	// 	from {
-	// 		height: var(--reka-accordion-content-height);
-	// 	}
-	// 	to {
-	// 		height: 0;
-	// 	}
-	// }
 </style>
