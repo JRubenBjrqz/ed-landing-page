@@ -53,65 +53,68 @@
 				/>
 			</button>
 		</div>
-		<AnimatePresence :initial="false">
-			<motion.div
-				v-if="current"
-				:key="current.key"
-				:initial="{ opacity: 0, scale: 0.98 }"
-				:animate="{ opacity: 1, scale: 1 }"
-				:exit="{ opacity: 0, scale: 0.98 }"
-			>
-				<div class="ed-services-desktop__tab-grid-first-row">
-					<div class="ed-services-desktop__tab-grid-first-row-1">
-						<h1>{{ current.heading }}</h1>
-					</div>
-					<div class="ed-services-desktop__tab-grid-first-row-2">
-						<p>{{ current.copy }}</p>
-					</div>
-					<div class="ed-services-desktop__tab-grid-first-row-3">
-						<NuxtImg
-							src="/img/logo_asf.png"
-							alt="EasyDevs Logo"
-							loading="lazy"
-							width="100"
-						/>
-					</div>
-					<div class="ed-services-desktop__tab-grid-first-row-4">
-						<p>{{ current.bullets.join(' / ') }}</p>
-					</div>
-				</div>
-				<div class="ed-services-desktop__tab-grid-second-row">
-					<div class="ed-services-desktop__tab-grid-second-row-1">
-						<div class="ed-services-desktop__tab-grid-second-row-img-container">
+		<div class="relative">
+			<AnimatePresence :initial="false">
+				<motion.div
+					v-if="current"
+                    :key="current.key"
+                    :initial="{ opacity: 0, scale: 0.98 }"
+                    :animate="{ opacity: 1, scale: 1 }"
+                    :exit="{ opacity: 0, scale: 0.98 }"
+					class="absolute"
+				>
+					<div class="ed-services-desktop__tab-grid-first-row">
+						<div class="ed-services-desktop__tab-grid-first-row-1">
+							<h1>{{ current.heading }}</h1>
+						</div>
+						<div class="ed-services-desktop__tab-grid-first-row-2">
+							<p>{{ current.copy }}</p>
+						</div>
+						<div class="ed-services-desktop__tab-grid-first-row-3">
 							<NuxtImg
-								:src="current.gallerySides.left.src"
-								:alt="current.gallerySides.left.alt"
+								src="/img/logo_asf.png"
+								alt="EasyDevs Logo"
 								loading="lazy"
-								class="ed-services-desktop__tab-grid-second-row-img"
+								width="100"
 							/>
 						</div>
-					</div>
-					<div class="ed-services-desktop__tab-grid-second-row-2">
-						<NuxtImg
-							src="/img/logo_asf_orange.png"
-							alt="EasyDevs Logo"
-							loading="lazy"
-							width="80"
-						/>
-					</div>
-					<div class="ed-services-desktop__tab-grid-second-row-3">
-						<div class="ed-services-desktop__tab-grid-second-row-img-container">
-							<NuxtImg
-								:src="current.gallerySides.right.src"
-								:alt="current.gallerySides.right.alt"
-								loading="lazy"
-								class="ed-services-desktop__tab-grid-second-row-img"
-							/>
+						<div class="ed-services-desktop__tab-grid-first-row-4">
+							<p>{{ current.bullets.join(' / ') }}</p>
 						</div>
 					</div>
-				</div>
-			</motion.div>
-		</AnimatePresence>
+					<div class="ed-services-desktop__tab-grid-second-row">
+						<div class="ed-services-desktop__tab-grid-second-row-1">
+							<div class="ed-services-desktop__tab-grid-second-row-img-container">
+								<NuxtImg
+									:src="current.gallerySides.left.src"
+									alt="EasyDevs Logo"
+									loading="lazy"
+									class="ed-services-desktop__tab-grid-second-row-img"
+								/>
+							</div>
+						</div>
+						<div class="ed-services-desktop__tab-grid-second-row-2">
+							<NuxtImg
+								src="/img/logo_asf_orange.png"
+								alt="EasyDevs Logo"
+								loading="lazy"
+								width="80"
+							/>
+						</div>
+						<div class="ed-services-desktop__tab-grid-second-row-3">
+							<div class="ed-services-desktop__tab-grid-second-row-img-container">
+								<NuxtImg
+									:src="current.gallerySides.right.src"
+									:alt="current.gallerySides.right.alt"
+									loading="lazy"
+									class="ed-services-desktop__tab-grid-second-row-img"
+								/>
+							</div>
+						</div>
+					</div>
+				</motion.div>
+			</AnimatePresence>
+		</div>
 	</div>
 </template>
 

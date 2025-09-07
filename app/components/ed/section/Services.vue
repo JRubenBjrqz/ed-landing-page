@@ -83,183 +83,7 @@
 
 	const active = ref<string>('branding')
 	const current = computed(() => TABS.find(t => t.key === active.value)!)
-	const openKey = ref<string | null>('branding')
-
-	function toggleMobile(k: string) {
-		openKey.value = openKey.value === k ? null : k
-	}
 </script>
-
-<!-- <template>
-  <section id="services" class="section-anchor w-full bg-[var(--ed-bg,#FDFDFD)] scroll-mt-20">
-    <div class="hidden lg:block">
-			Desktop
-      <div class="site-container py-16 md:py-20">
-        <div class="flex items-start justify-between gap-6">
-          <div>
-            <p class="text-2xl font-normal capitalize text-gray-800">We Are Good At It</p>
-            <h2 class="text-5xl font-bold capitalize text-gray-800 mt-2">What We Offer</h2>
-          </div>
-          <div class="relative w-[120px] h-[52px]">
-            Imagen
-          </div>
-        </div>
-        <div class="flex items-center mt-8 border-b border-gray-200">
-          <button
-            v-for="tab in TABS"
-            :key="tab.key"
-            @click="active = tab.key"
-            :class="[
-              'px-4 py-3 text-sm font-bold capitalize transition-all duration-200 relative whitespace-nowrap',
-              active === tab.key
-                ? 'bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent'
-                : 'text-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:bg-clip-text hover:text-transparent'
-            ]"
-          >
-            {{ tab.label }}
-            <template v-if="active === tab.key">
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-orange-500" />
-              <div class="absolute top-0 right-0 w-1 h-full bg-orange-500" />
-            </template>
-          </button>
-        </div>
-        <div :key="current.key" class="mt-0 animate-[panelPop_240ms_cubic-bezier(.2,.8,.2,1)]">
-          <div class="grid grid-cols-5 grid-rows-2 w-full h-[300px] gap-0 border-b border-black/20">
-            <div class="col-span-1 row-span-2 p-4 border-r border-black/20 flex items-center justify-start">
-              <div class="text-left text-gray-800 text-3xl font-black font-['Work_Sans']">{{ current.heading }}</div>
-            </div>
-            <div class="col-span-2 row-span-2 p-4 border-l border-r border-black/20 flex items-start justify-start">
-              <div class="self-stretch justify-start text-gray-800 text-base font-normal font-['Work_Sans']">{{ current.copy }}</div>
-            </div>
-            <div class="col-span-1 row-span-2 p-4 border-r border-black/20 flex items-center justify-center">
-              Imagen
-            </div>
-            <div class="col-span-1 row-span-2 p-4 flex items-start justify-end">
-              <div class="w-full text-right text-orange-500 text-base font-normal font-['Work_Sans']">
-                {{ current.bullets.join(' / ') }}
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-5 w-full">
-            <div class="col-span-2 border-r border-black/20 flex items-center justify-center">
-              <div class="relative w-full h-[300px]">
-                Imagen
-              </div>
-            </div>
-            <div class="col-span-1 border-r border-black/20 flex items-center justify-center">
-              <div class="relative w-full h-[300px]">
-                Imagen
-              </div>
-            </div>
-            <div class="col-span-2 flex items-center justify-center">
-              <div class="relative w-full h-[300px]">
-                Imagen
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden md:block lg:hidden">
-		md
-      <div class="hidden md:block lg:hidden">
-  <div class="site-container py-16 relative">
-    <div class="pointer-events-none absolute -top-3 right-6 rotate-[-14deg]">
-      Imagen
-    </div>
-
-    <p class="text-[#232631] text-2xl font-normal capitalize" style="font-family: var(--ed-work-sans)">
-      We Are Good At It
-    </p>
-    <h2 class="mt-1 text-[#232631] text-[48px] font-bold capitalize" style="font-family: var(--ed-fira-sans)">
-      What We Offer
-    </h2>
-
-    <div class="mt-8 grid grid-cols-[300px_minmax(420px,1fr)] gap-10">
-      <div class="relative">
-        <div class="absolute right-0 top-0 h-full w-px bg-black/20" />
-        <ul class="space-y-2 pr-6">
-          <li v-for="tab in TABS" :key="tab.key">
-            <button @click="active = tab.key" class="w-full text-left py-4">
-              <div class="flex items-center gap-3">
-                <span class="inline-block h-8 rounded-full"
-                  :style="{ width: '4px', background: active === tab.key ? ORANGE : 'transparent' }" />
-                <span
-                  :class="['text-[24px] capitalize', active === tab.key ? 'font-medium' : 'font-normal']"
-                  style="font-family: var(--ed-fira-sans)">
-                  <span
-                    :class="active === tab.key ? 'bg-gradient-to-r from-[#FF742A] to-[#FFB1B2] bg-clip-text text-transparent' : 'text-[#232631]'">
-                    {{ tab.label }}
-                  </span>
-                </span>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div :key="current.key" class="grid grid-rows-[auto_auto_auto_auto] gap-4 animate-[panelPop_240ms_cubic-bezier(.2,.8,.2,1)]">
-        <h3 class="text-[#232631] text-[16px] font-bold" style="font-family: var(--ed-work-sans)">
-          {{ current.heading }}
-        </h3>
-        <p class="text-[#232631] text-[16px]" style="font-family: var(--ed-work-sans)">
-          {{ current.copy }}
-        </p>
-        <div class="text-right text-[16px]" :style="{ color: ORANGE, fontFamily: 'var(--ed-work-sans)' }">
-          {{ current.bullets.join('  |  ') }}
-        </div>
-        <div class="grid grid-cols-2 gap-6 mt-2">
-          <div class="relative w-full h-[232px]">
-            Imagen
-          </div>
-          <div class="relative w-full h-[232px]">
-            Imagen
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-
-    <div class="md:hidden">
-		mobile
-      <div class="site-container py-12 bg-[#FBFBFB]">
-        <p class="text-[#232631] text-[24px] font-normal capitalize" style="font-family: var(--ed-work-sans)">We Are Good At It</p>
-        <h2 class="text-[#232631] text-[48px] font-bold capitalize" style="font-family: var(--ed-fira-sans)">What We Offer</h2>
-        <div class="mt-6 space-y-10">
-          <div v-for="tab in TABS" :key="tab.key" class="border-b border-[var(--ed-orange)] pb-2">
-            <button @click="toggleMobile(tab.key)" class="w-full flex items-center justify-between py-2">
-              <span class="text-[18px] font-medium capitalize" style="font-family: var(--ed-fira-sans)">
-                <span :class="openKey === tab.key ? 'bg-gradient-to-r from-[#FF742A] to-[#FFB1B2] bg-clip-text text-transparent' : ''" :style="{ color: openKey === tab.key ? undefined : '#FF742A' }">
-                  {{ tab.label }}
-                </span>
-              </span>
-              <span class="text-2xl leading-none text-[#232631]">{{ openKey === tab.key ? '–' : '+' }}</span>
-            </button>
-            <transition name="fade">
-              <div v-if="openKey === tab.key" class="mt-3 space-y-4">
-                <h3 class="text-[24px] font-bold text-[#232631]" style="font-family: var(--ed-work-sans)">{{ tab.heading }}</h3>
-                <hr class="border-black/20" />
-                <p class="text-[16px] text-[#232631]" style="font-family: var(--ed-work-sans)">{{ tab.copy }}</p>
-                <div class="text-[16px]" style="color: #FF742A; font-family: var(--ed-work-sans)">{{ tab.bullets.join(' / ') }}</div>
-                <div class="space-y-3">
-                  <div class="relative w-full h-[151px]">
-                    Imagen
-                  </div>
-                  <div class="relative w-full h-[151px]">
-                    Imagen
-                  </div>
-                </div>
-              </div>
-            </transition>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template> -->
 
 <template>
 	<main
@@ -275,7 +99,9 @@
 					</h1>
 				</div>
 				<template v-if="isMobile">
-					Mobile
+					<EdServicesMobile
+						:TABS="TABS"
+					/>
 				</template>
 				<template v-if="isTablet">
 					<EdServicesTablet
@@ -325,6 +151,6 @@
 	}
 
 	section {
-		@apply min-h-0;
+		@apply min-h-0 xl:min-h-screen;
 	}
 </style>
