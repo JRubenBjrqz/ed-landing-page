@@ -13,8 +13,8 @@
         { name: "About", id: "edAbout" },
         { name: "Benefits", id: "edBenefits" },
         { name: "Portfolio", id: "edCounters" },
-        // { name: "Services", id: "edServices" },
-        { name: "Reviews", id: "edTestimonials" },
+        { name: "Services", id: "edServices" },
+        // { name: "Reviews", id: "edTestimonials" },
         { name: "FAQ", id: "edFaq" },
         { name: "Contact Us", id: "edForm" },
     ];

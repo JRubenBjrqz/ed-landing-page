@@ -120,7 +120,7 @@
             @apply container mx-auto px-4 lg:px-16;
         }
 
-		&__accordion-title {
+				&__accordion-title {
             @apply text-5xl font-extrabold mb-8;
         }
 

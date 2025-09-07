@@ -5,7 +5,7 @@
     <EdSectionBenefits />
     <EdSectionSteps />
     <EdSectionCounters />
-    <!-- <EdSectionServices /> -->
+    <EdSectionServices />
     <!-- <EdSectionTestimonials /> -->
     <EdSectionFaq />
     <EdSectionForm />
