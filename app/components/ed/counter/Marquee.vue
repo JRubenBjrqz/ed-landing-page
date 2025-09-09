@@ -2,16 +2,16 @@
     import {useBreakpoints} from '@vueuse/core'
 
     const LOGOS = [
-        { src: '/img/stack/angular.png', alt: 'Angular' },
-        { src: '/img/stack/c-sharp.png', alt: 'C#' },
-        { src: '/img/stack/django.png', alt: 'Django' },
-        { src: '/img/stack/js.png', alt: 'JavaScript' },
-        { src: '/img/stack/next.png', alt: 'Next.js' },
-        { src: '/img/stack/php.png', alt: 'PHP' },
-        { src: '/img/stack/python.png', alt: 'Python' },
-        { src: '/img/stack/react.png', alt: 'React' },
-        { src: '/img/stack/swift.png', alt: 'Swift' },
-        { src: '/img/stack/vue.png', alt: 'Vue.js' },
+        { src: 'https://easydevs.us/img/stack/angular.png', alt: 'Angular' },
+        { src: 'https://easydevs.us/img/stack/c-sharp.png', alt: 'C#' },
+        { src: 'https://easydevs.us/img/stack/django.png', alt: 'Django' },
+        { src: 'https://easydevs.us/img/stack/js.png', alt: 'JavaScript' },
+        { src: 'https://easydevs.us/img/stack/next.png', alt: 'Next.js' },
+        { src: 'https://easydevs.us/img/stack/php.png', alt: 'PHP' },
+        { src: 'https://easydevs.us/img/stack/python.png', alt: 'Python' },
+        { src: 'https://easydevs.us/img/stack/react.png', alt: 'React' },
+        { src: 'https://easydevs.us/img/stack/swift.png', alt: 'Swift' },
+        { src: 'https://easydevs.us/img/stack/vue.png', alt: 'Vue.js' },
     ];
     const items = [...LOGOS, ...LOGOS]
     const cardRefs = ref<(HTMLElement | null)[]>(Array(items.length).fill(null))
@@ -76,9 +76,6 @@
                         :alt="logo.alt"
                         :width="isMd ? 28 : 22"
                         :height="isMd ? 28 : 22"
-                        fit="inside"
-                        draggable="false"
-                        format="webp"
                     />
                 </div>
             </div>

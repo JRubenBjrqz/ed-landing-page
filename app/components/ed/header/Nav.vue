@@ -69,7 +69,7 @@
 
 <style lang="scss" scoped>
 .ed-header-nav {
-    @apply absolute right-0 top-full mt-5 z-40 bg-[var(--ed-white)] py-6
+    @apply absolute right-0 top-full mt-6 z-40 bg-[var(--ed-white)] py-6
         px-8 shadow-sm rounded-[32px] flex flex-col border;
 
     &__nav {

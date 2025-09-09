@@ -17,4 +17,7 @@ export default defineNuxtConfig({
   lucide: {
     namePrefix: "Icon",
   },
+  app: {
+    baseURL: "/",
+  },
 });

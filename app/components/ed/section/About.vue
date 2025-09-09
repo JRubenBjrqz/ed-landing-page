@@ -34,7 +34,7 @@
                 </div>
                 <div class="ed-about__img-container">
                     <NuxtImg
-                        src="https://easydevs.us/images/about-graphic.avif"
+                        src="https://easydevs.us/img/about_graphic.avif"
                     />
                 </div>
             </div>

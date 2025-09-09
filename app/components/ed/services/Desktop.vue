@@ -72,7 +72,7 @@
 						</div>
 						<div class="ed-services-desktop__tab-grid-first-row-3">
 							<NuxtImg
-								src="/img/logo_asf.png"
+								src="https://easydevs.us/img/logo_asf.png"
 								alt="EasyDevs Logo"
 								loading="lazy"
 								width="100"
@@ -95,7 +95,7 @@
 						</div>
 						<div class="ed-services-desktop__tab-grid-second-row-2">
 							<NuxtImg
-								src="/img/logo_asf_orange.png"
+								src="https://easydevs.us/img/logo_asf_orange.png"
 								alt="EasyDevs Logo"
 								loading="lazy"
 								width="80"

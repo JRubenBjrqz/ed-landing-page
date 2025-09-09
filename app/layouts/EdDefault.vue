@@ -1,5 +1,10 @@
+<script lang="ts" setup>
+	const SECTION_IDS = ['edHero', 'edAbout', 'edBenefits', 'edCounters', 'edServices', 'edFaq', 'edForm'];
+</script>
+
 <template>
     <div class="ed-default">
+        <EdFloatingActionButton :section-ids="SECTION_IDS" />
         <EdHeader />
             <slot />
         <EdFooter/>

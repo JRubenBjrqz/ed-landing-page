@@ -19,7 +19,7 @@
                 <EdHeroButton />
             </div>
             <NuxtImg
-                src="https://easydevs.us/images/blob.avif"
+                src="https://easydevs.us/img/blob.avif"
                 class="ed-hero__img"
             />
         </section>

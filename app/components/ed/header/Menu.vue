@@ -1,23 +1,9 @@
 <script lang="ts" setup>
-
     const isOpen = ref(false);
-    const isScrolled = ref(false);
-    
-    const handleScroll = () => {
-        isScrolled.value = window.scrollY > 10;
-    };
 
     const closeNav = () => {
         isOpen.value = false;
     }
-
-    onMounted(() => {
-        window.addEventListener("scroll", handleScroll);
-    });
-    
-    onBeforeUnmount(() => {
-        window.removeEventListener("scroll", handleScroll);
-    });
 </script>
 
 <template>
