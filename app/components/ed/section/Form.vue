@@ -29,7 +29,7 @@
             fd.set('_template', 'table');
             fd.set('_captcha', 'false');
 
-            const { data, status } = await useFetch<FormSubmitResponse>('hello@easydevs.us', {
+            const { data, status } = await useFetch<FormSubmitResponse>('https://formsubmit.co/ajax/hello@easydevs.us', {
                 method: 'POST',
                 body: fd,
                 headers: { Accept: 'application/json' },
